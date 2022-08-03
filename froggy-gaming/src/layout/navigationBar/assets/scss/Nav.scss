@@ -280,10 +280,10 @@ body.nav-open {
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
-                margin-top: 2rem;
-                margin-bottom: 1rem;
 
                 span {
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
                     font-size: 1.5rem;
                     color: black;
                     background: rgba($color: gray, $alpha: 0.5);
