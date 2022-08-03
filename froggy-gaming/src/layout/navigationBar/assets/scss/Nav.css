@@ -238,13 +238,11 @@ body.nav-open {
 .header-navigation-form-query {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 .header-navigation-form-query span {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 1.5rem;
-  color: black;
   background: rgba(128, 128, 128, 0.5);
   border-radius: 8px;
   padding: 1rem;

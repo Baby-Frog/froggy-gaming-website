@@ -279,13 +279,11 @@ body.nav-open {
             &-query {
                 display: flex;
                 flex-direction: column;
-                gap: 0.5rem;
 
                 span {
                     margin-top: 2rem;
-                    margin-bottom: 1rem;
+                    margin-bottom: 2rem;
                     font-size: 1.5rem;
-                    color: black;
                     background: rgba($color: gray, $alpha: 0.5);
                     border-radius: 8px;
                     padding: 1rem;
