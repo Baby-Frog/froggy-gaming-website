@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Hi! Welcome to our project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a gaming gears store website
 
-## Available Scripts
+See more detail in [Froggy Gaming](https://baby-frog.github.io/froggy-gaming/)
 
-In the project directory, you can run:
+## What we have ?
 
-### `npm start`
+If you are hiring any gaming gear, we have it !
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Categories for website
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Keyboard: Akko, Logitech, Cosair, HyperX, E-DRA, DareU, ASUS, Steelseries
+Mouse: Akko, Logitech, Cosair, DareU, ASUS, Steelseries
+Headphone: Logitech, Cosair, HyperX, DareU, ASUS, JBL, Rapoo
+Microphone: Razer, HyperX, ThronMax, Elgato, NZXT
+Keycaps: Akko, GMK, Vortex
+Gaming Chair: Cosair, DXRacer, Warrior, Cougar
+Gaming accessories: Màng lọc âm, Streaming Deck, Capture Card, Artisan Keycaps
 
-### `npm test`
+## Keyboard
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Akko:
 
-### `npm run build`
+* Akko 3084v2, Akko 3084B, Akko 3068v2, Akko 3087, Akko 3108, Akko Mojike
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Logitech:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Logitech K580, Logitech G213, Logitech MK470, Logitech G610 Orion, Logitech Pop Keys, Logitech G512 GX RGB, Logitech G613 Wireless, Logitech G Pro/ G Pro X, Logitech G813 RGB
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Cosair:
 
-### `npm run eject`
+* Cosair K55 RGB Pro, Cosair K63, Cosair K57 RGB Wireless, Cosair K65 RGB MINI White, Cosair K65 RGB MINI, Corsair K68 RGB, Cosair K70 TKL RGB Champion Series, Bàn phím Corsair K95 RGB Platinum XT, Bàn phím cơ Corsair K100 RGB
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- HyperX:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* HyperX Alloy Core RGB, Kingston HyperX Alloy Origins Core TKL RGB, Kingston HyperX Alloy Origins, Kingston HyperX Alloy Origins 60 Pink, Kingston HyperX Alloy Origins 65
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- E-DRA:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* E-DRA EK384W Bluetooth, E-DRA EK396W Bluetooth, E-Dra EK396 RGB, E-DRA EK384
 
-## Learn More
+- DareU:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* DareU EK1280 RGB, DareU EK8100 RGB, DareU EK1280s Pink White, Bàn phím DareU EK87 Pink White, DareU LK145 USB
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- ASUS:
 
-### Code Splitting
+* Asus ROG Strix Scope NX TKL Moonlight White, ASUS TUF Gaming K3, Asus ROG Strix Scope NX Deluxe, Asus ROG Strix Scope TKL Gundam Edition, ASUS TUF Gaming K1, Asus ROG Strix Flare, Asus ROG Strix Scope TKL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Steelseries:
 
-### Analyzing the Bundle Size
+* Steelseries Apex 3, Steelseries Apex 5, Steelseries Apex 7 TKL, Steelseries Apex 7, Steelseries Apex PRO TKL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Mouse
 
-### Making a Progressive Web App
+- Akko:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Akko Hammer Plus , Akko One Piece, Akko Dragon Ball Z, Akko FPS
 
-### Advanced Configuration
+- Logitech:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Logitech G203, Logitech G102, Logitech G Pro, Logitech G402 Hyperion, Logitech G304 Lightspeed Wireless, Logitech G502 Hero, Logitech G703 HERO Lightspeed Wireless, Logitech G Pro X Superlight Wireless
 
-### Deployment
+- Cosair:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Corsair Katar Pro Ultra Light, Corsair M55 RGB Pro, Corsair Ironclaw RGB, Corsair Sabre RGB Pro, Corsair NightSword RGB, Corsair Scimitar RGB ELITE
 
-### `npm run build` fails to minify
+- DareU:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Dare-U EM908, DareU EM901, DareU EM901X, DareU A960
+
+- ASUS:
+
+* ASUS ROG Gladius II Core, Asus TUF Gaming M4 Air, Asus ROG Strix, ASUS ROG Keris, ASUS ROG Gladius III Wireless
+
+- Steelseries:
+
+* Steelseries Rival 3, Steelseries Rival 5, SteelSeries Sensei Ten, SteelSeries Aerox 3, Steelseries Prime Neo Noir, SteelSeries Aerox 5, SteelSeries Aerox 9
+
+## Headphones
+
+- Logitech:
+
+* Logitech G331, Logitech Astro A10 Blue, Logitech G335, Logitech G435 Lightspeed Wireless, Logitech G435 Lightspeed, Logitech G Pro Gen 2, Logitech G633S, Logitech G Pro X, Logitech G733 LIGHTSPEED
+
+- Cosair:
+
+* Corsair HS35 Stereo Carbon, Corsair HS50 Pro Stereo, Corsair HS60 Pro, Corsair VOID, Corsair HS70, Corsair Virtuoso RGB
