@@ -199,9 +199,29 @@ body.nav-open {
   top: 50%;
   transform: translateY(-50%);
 }
+.header-navigation-form-find .loading-circle {
+  position: absolute;
+  right: 1.7rem;
+  top: 1rem;
+  transform: rotate(0deg);
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 100rem;
+  border-top: 2px solid transparent;
+}
 .header-navigation-form-input {
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.03);
+  color: black;
   border-radius: 1.7rem;
   padding: 1.7rem 2.2rem;
   max-width: 100%;
@@ -273,6 +293,17 @@ body.nav-open {
   right: 1.4rem;
 }
 
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (max-width: 1205px) {
   .header-navigation-cart {
     margin-left: 2.7rem;

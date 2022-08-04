@@ -11,11 +11,13 @@ const Nav = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const handleFetchNews = useRef({});
   handleFetchNews.current = async () => {
+    setLoading(true);
     try {
       const response = await axios.get(
         `https://hn.algolia.com/api/v1/search?query=${query}&hitsPerPage=5`
       );
       setHits(response.data?.hits || []);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -54,7 +56,6 @@ const Nav = () => {
                   className="header-navigation-form-input"
                   placeholder="Nhập vào sản phẩm muốn tìm"
                 />
-                <ion-icon name="search-outline"></ion-icon>
               </div>
             </form>
           </li>
@@ -80,7 +81,11 @@ const Nav = () => {
                     1000
                   )}
                 />
-                <ion-icon name="search-outline"></ion-icon>
+                {!loading ? (
+                  <ion-icon name="search-outline"></ion-icon>
+                ) : (
+                  <div className="loading-circle"></div>
+                )}
               </div>
               <div className="header-navigation-form-query">
                 {query &&
