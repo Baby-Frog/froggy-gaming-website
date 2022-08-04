@@ -316,7 +316,7 @@ body.nav-open {
 }
 @media screen and (max-width: 1188px) {
   .header-icon {
-    width: 100px;
+    width: 70px;
     height: auto;
   }
   .header-navigation-item {

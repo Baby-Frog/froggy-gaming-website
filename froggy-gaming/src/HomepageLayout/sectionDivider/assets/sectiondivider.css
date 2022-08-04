@@ -17,4 +17,10 @@
   background-position-x: center;
   background-position-y: bottom;
   padding-top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-content {
+    font-size: 1.7rem;
+  }
 }/*# sourceMappingURL=sectiondivider.css.map */

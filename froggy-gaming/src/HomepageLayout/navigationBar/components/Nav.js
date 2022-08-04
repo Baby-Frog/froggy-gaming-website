@@ -1,24 +1,66 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useReducer } from "react";
 import lodash from "lodash";
 import axios from "axios";
 import "../assets/scss/Nav.css";
 import Logo from "../assets/images/froggy-gaming-logo.png";
 
+const initialState = {
+  hits: [],
+  query: "",
+  loading: true,
+};
+
+const gamingProductsReducer = (state, action) => {
+  switch (action.type) {
+    case "SET_HITS": {
+      return { ...state, hits: action.payload };
+    }
+    case "SET_LOADING": {
+      return { ...state, loading: action.payload };
+    }
+
+    case "SET_QUERY": {
+      return { ...state, query: action.payload };
+    }
+
+    default:
+      break;
+  }
+};
+
 const Nav = () => {
-  const [hits, setHits] = useState([]);
-  const [query, setQuery] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [state, dispatch] = useReducer(gamingProductsReducer, initialState);
+  // const [hits, setHits] = useState([]);
+  // const [query, setQuery] = useState("");
+  // const [loading, setLoading] = useState(true);
   const [mobileNav, setMobileNav] = useState(false);
   const handleFetchNews = useRef({});
   handleFetchNews.current = async () => {
-    if (query.trim().length === 0) setQuery("");
-    setLoading(true);
+    if (state.query.trim().length === 0) {
+      dispatch({
+        type: "SET_QUERY",
+        payload: "",
+      });
+    }
+    // setLoading(true);
+    dispatch({
+      type: "SET_LOADING",
+      payload: true,
+    });
     try {
       const response = await axios.get(
-        `https://hn.algolia.com/api/v1/search?query=${query}&hitsPerPage=5`
+        `https://hn.algolia.com/api/v1/search?query=${state.query}&hitsPerPage=5`
       );
-      setHits(response.data?.hits || []);
-      setLoading(false);
+      // setHits(response.data?.hits || []);
+      dispatch({
+        type: "SET_HITS",
+        payload: response.data?.hits || [],
+      });
+      // setLoading(false);
+      dispatch({
+        type: "SET_LOADING",
+        payload: false,
+      });
     } catch (error) {
       console.log(error);
     }
@@ -28,8 +70,8 @@ const Nav = () => {
     document.body.classList.toggle("nav-open");
   };
   useEffect(() => {
-    handleFetchNews.current(query);
-  }, [query]);
+    handleFetchNews.current(state.query);
+  }, [state.query]);
 
   return (
     <div className={`header ${mobileNav ? "active" : ""}`}>
@@ -57,18 +99,22 @@ const Nav = () => {
                   className="header-navigation-form-input"
                   placeholder="Nhập vào sản phẩm muốn tìm"
                   onChange={lodash.debounce(
-                    (e) => setQuery(e.target.value),
+                    (e) =>
+                      dispatch({
+                        type: "SET_QUERY",
+                        payload: e.target.value,
+                      }),
                     1000
                   )}
                 />
               </div>
               <div className="header-navigation-form-query">
-                {query &&
-                  hits.length > 0 &&
-                  hits.map((item, index) => (
+                {state.query &&
+                  state.hits.length > 0 &&
+                  state.hits.map((item, index) => (
                     <span key={index}>{item.title}</span>
                   ))}
-                {hits.length <= 0 && (
+                {state.hits.length <= 0 && (
                   <div className="header-navigation-form-notfound">
                     Không có sản phẩm nào
                   </div>
@@ -94,23 +140,27 @@ const Nav = () => {
                   className="header-navigation-form-input"
                   placeholder="Nhập vào sản phẩm muốn tìm"
                   onChange={lodash.debounce(
-                    (e) => setQuery(e.target.value),
+                    (e) =>
+                      dispatch({
+                        type: "SET_QUERY",
+                        payload: e.target.value,
+                      }),
                     1000
                   )}
                 />
-                {!loading ? (
+                {!state.loading ? (
                   <ion-icon name="search-outline"></ion-icon>
                 ) : (
                   <div className="loading-circle"></div>
                 )}
               </div>
               <div className="header-navigation-form-query">
-                {query &&
-                  hits.length > 0 &&
-                  hits.map((item, index) => (
+                {state.query &&
+                  state.hits.length > 0 &&
+                  state.hits.map((item, index) => (
                     <span key={index}>{item.title}</span>
                   ))}
-                {hits.length <= 0 && (
+                {state.hits.length <= 0 && (
                   <div className="header-navigation-form-notfound">
                     Không có sản phẩm nào
                   </div>
