@@ -239,13 +239,18 @@ body.nav-open {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: 2rem;
 }
 .header-navigation-form-query span {
   font-size: 1.5rem;
   background: rgba(128, 128, 128, 0.5);
   border-radius: 8px;
   padding: 1rem;
+}
+.header-navigation-form-query span:first-of-type {
+  margin-top: 2rem;
+}
+.header-navigation-form-query span:first:first-of-type {
+  margin-top: 2rem;
 }
 
 .triangle {
