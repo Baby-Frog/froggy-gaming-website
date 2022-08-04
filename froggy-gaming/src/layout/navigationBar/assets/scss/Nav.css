@@ -16,6 +16,7 @@ ion-icon {
 
 body.nav-open {
   overflow: hidden;
+  height: 100%;
 }
 
 .header {
@@ -251,6 +252,14 @@ body.nav-open {
 }
 .header-navigation-form-query span:first:first-of-type {
   margin-top: 2rem;
+}
+.header-navigation-form-notfound {
+  margin-top: 2rem;
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 .triangle {

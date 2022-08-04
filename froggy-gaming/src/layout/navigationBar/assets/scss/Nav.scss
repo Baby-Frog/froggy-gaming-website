@@ -32,6 +32,7 @@ ion-icon {
 
 body.nav-open {
     overflow: hidden;
+    height: 100%;
 }
 
 .header {
@@ -296,6 +297,15 @@ body.nav-open {
                         margin-top: 2rem;
                     }
                 }
+            }
+
+            &-notfound {
+                margin-top: 2rem;
+                color: black;
+                font-weight: 500;
+                font-size: 1.2rem;
+                border-radius: 1rem;
+                padding: 1rem;
             }
         }
 

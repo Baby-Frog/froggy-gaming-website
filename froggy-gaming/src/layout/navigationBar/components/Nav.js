@@ -7,6 +7,7 @@ import Logo from "../assets/images/froggy-gaming-logo.png";
 const Nav = () => {
   const [hits, setHits] = useState([]);
   const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(true);
   const [mobileNav, setMobileNav] = useState(false);
   const handleFetchNews = useRef({});
   handleFetchNews.current = async () => {
@@ -87,6 +88,11 @@ const Nav = () => {
                   hits.map((item, index) => (
                     <span key={index}>{item.title}</span>
                   ))}
+                {hits.length <= 0 && (
+                  <div className="header-navigation-form-notfound">
+                    Không có sản phẩm nào
+                  </div>
+                )}
               </div>
             </form>
           </li>
