@@ -202,8 +202,7 @@ body.nav-open {
 .header-navigation-form-find .loading-circle {
   position: absolute;
   right: 1.7rem;
-  top: 1rem;
-  transform: rotate(0deg);
+  top: 50%;
   -webkit-animation-name: spin;
           animation-name: spin;
   -webkit-animation-duration: 1s;
@@ -294,14 +293,20 @@ body.nav-open {
 }
 
 @-webkit-keyframes spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
   to {
-    transform: rotate(360deg);
+    transform: translateY(-50%) rotate(360deg);
   }
 }
 
 @keyframes spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
   to {
-    transform: rotate(360deg);
+    transform: translateY(-50%) rotate(360deg);
   }
 }
 @media screen and (max-width: 1205px) {

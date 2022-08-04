@@ -11,6 +11,7 @@ const Nav = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const handleFetchNews = useRef({});
   handleFetchNews.current = async () => {
+    if (query.trim().length === 0) setQuery("");
     setLoading(true);
     try {
       const response = await axios.get(

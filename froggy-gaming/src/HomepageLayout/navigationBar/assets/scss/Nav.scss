@@ -248,8 +248,7 @@ body.nav-open {
                 .loading-circle {
                     position: absolute;
                     right: 1.7rem;
-                    top: 1rem;
-                    transform: rotate(0deg);
+                    top: 50%;
                     animation-name: spin;
                     animation-duration: 1s;
                     animation-iteration-count: infinite;
@@ -341,8 +340,12 @@ body.nav-open {
 }
 
 @keyframes spin {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
     to {
-        transform: rotate(360deg);
+        transform: translateY(-50%) rotate(360deg);
     }
 }
 
@@ -503,6 +506,7 @@ body.nav-open {
 
                 ion-icon {
                     display: none;
+
                 }
 
                 &-input {
