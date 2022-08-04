@@ -55,7 +55,23 @@ const Nav = () => {
                   htmlFor="search"
                   className="header-navigation-form-input"
                   placeholder="Nhập vào sản phẩm muốn tìm"
+                  onChange={lodash.debounce(
+                    (e) => setQuery(e.target.value),
+                    1000
+                  )}
                 />
+              </div>
+              <div className="header-navigation-form-query">
+                {query &&
+                  hits.length > 0 &&
+                  hits.map((item, index) => (
+                    <span key={index}>{item.title}</span>
+                  ))}
+                {hits.length <= 0 && (
+                  <div className="header-navigation-form-notfound">
+                    Không có sản phẩm nào
+                  </div>
+                )}
               </div>
             </form>
           </li>
