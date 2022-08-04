@@ -3,7 +3,7 @@ import React from "react";
 const HomepageCategory = () => {
   return (
     <div>
-      <p>abcd</p>
+      <p></p>
     </div>
   );
 };
