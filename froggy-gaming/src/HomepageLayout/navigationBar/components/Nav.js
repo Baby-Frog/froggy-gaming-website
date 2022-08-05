@@ -8,6 +8,7 @@ const initialState = {
   hits: [],
   query: "",
   loading: true,
+  mobileNav: false,
 };
 
 const gamingProductsReducer = (state, action) => {
