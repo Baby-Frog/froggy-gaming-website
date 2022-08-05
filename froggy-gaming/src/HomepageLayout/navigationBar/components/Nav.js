@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useReducer } from "react";
+import React, { useEffect, useRef, useReducer } from "react";
 import lodash from "lodash";
 import axios from "axios";
 import "../assets/scss/Nav.css";
@@ -23,6 +23,10 @@ const gamingProductsReducer = (state, action) => {
       return { ...state, query: action.payload };
     }
 
+    case "SET_MOBILENAV": {
+      return { ...state, mobileNav: action.payload };
+    }
+
     default:
       break;
   }
@@ -30,10 +34,6 @@ const gamingProductsReducer = (state, action) => {
 
 const Nav = () => {
   const [state, dispatch] = useReducer(gamingProductsReducer, initialState);
-  // const [hits, setHits] = useState([]);
-  // const [query, setQuery] = useState("");
-  // const [loading, setLoading] = useState(true);
-  const [mobileNav, setMobileNav] = useState(false);
   const handleFetchNews = useRef({});
   handleFetchNews.current = async () => {
     if (state.query.trim().length === 0) {
@@ -42,7 +42,6 @@ const Nav = () => {
         payload: "",
       });
     }
-    // setLoading(true);
     dispatch({
       type: "SET_LOADING",
       payload: true,
@@ -51,12 +50,10 @@ const Nav = () => {
       const response = await axios.get(
         `https://hn.algolia.com/api/v1/search?query=${state.query}&hitsPerPage=5`
       );
-      // setHits(response.data?.hits || []);
       dispatch({
         type: "SET_HITS",
         payload: response.data?.hits || [],
       });
-      // setLoading(false);
       dispatch({
         type: "SET_LOADING",
         payload: false,
@@ -66,7 +63,10 @@ const Nav = () => {
     }
   };
   const handleMobileNav = () => {
-    setMobileNav((mobileNav) => !mobileNav);
+    dispatch({
+      type: "SET_MOBILENAV",
+      payload: !state.mobileNav,
+    });
     document.body.classList.toggle("nav-open");
   };
   useEffect(() => {
@@ -74,7 +74,7 @@ const Nav = () => {
   }, [state.query]);
 
   return (
-    <div className={`header ${mobileNav ? "active" : ""}`}>
+    <div className={`header ${state.mobileNav ? "active" : ""}`}>
       <div className="header-hamburger-toggle">
         <i className="fa-solid fa-bars" onClick={handleMobileNav}></i>
       </div>
@@ -86,9 +86,11 @@ const Nav = () => {
         </span>
       </div>
       <div className="header-invin-flex">
-        <p>hello</p>
+        <i className="fa-solid fa-user"></i>
+        <div>Trần Đăng Khôi</div>
+        <i className="fa-solid fa-angle-down"></i>
       </div>
-      <div className={`header-navigation ${mobileNav ? "active" : ""}`}>
+      <div className={`header-navigation ${state.mobileNav ? "active" : ""}`}>
         <ul className="header-navigation-list">
           <li className="header-navigation-item mobile">
             <form className="header-navigation-form" autoComplete="off">

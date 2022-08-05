@@ -449,6 +449,7 @@ body.nav-open {
     font-size: 1.9rem;
   }
   .header-invin-flex {
+    font-size: 1.4rem;
     opacity: 0;
     visibility: hidden;
     display: block;
