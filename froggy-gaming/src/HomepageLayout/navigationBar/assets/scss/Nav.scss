@@ -101,12 +101,6 @@ body.nav-open {
         align-items: center;
         height: 100%;
 
-        &-user {
-            span {
-                display: none;
-            }
-        }
-
         &-list {
             list-style-type: none;
             flex-shrink: 1;
@@ -411,17 +405,6 @@ body.nav-open {
             transform: translateX(-100%);
             transition: all 200ms linear;
             opacity: 0.95;
-
-            &-user {
-
-                span {
-                    display: block;
-                }
-
-                i {
-                    display: none;
-                }
-            }
 
             &-cart {
                 display: block;

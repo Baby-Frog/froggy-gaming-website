@@ -113,10 +113,10 @@
   }
   .homepage-category-name {
     font-size: 1.4rem;
-    width: calc(40% - 5rem);
+    width: calc(40% - 8rem);
   }
   .homepage-category-img {
-    width: calc(60% - 5rem);
+    width: calc(60% - 8rem);
     -o-object-fit: cover;
        object-fit: cover;
   }

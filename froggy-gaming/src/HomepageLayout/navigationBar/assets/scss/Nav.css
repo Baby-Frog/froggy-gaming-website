@@ -78,9 +78,6 @@ body.nav-open {
   align-items: center;
   height: 100%;
 }
-.header-navigation-user span {
-  display: none;
-}
 .header-navigation-list {
   list-style-type: none;
   flex-shrink: 1;
@@ -353,12 +350,6 @@ body.nav-open {
     transform: translateX(-100%);
     transition: all 200ms linear;
     opacity: 0.95;
-  }
-  .header-navigation-user span {
-    display: block;
-  }
-  .header-navigation-user i {
-    display: none;
   }
   .header-navigation-cart {
     display: block;

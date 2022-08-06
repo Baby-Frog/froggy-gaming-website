@@ -87,9 +87,9 @@ const Nav = () => {
         </span>
       </div>
       <div className="header-invin-flex">
-        <i className="fa-solid fa-user"></i>
-        <div>Trần Đăng Khôi</div>
-        <i className="fa-solid fa-angle-down"></i>
+        <div className="header-hamburger-toggle">
+          <i className="fa-solid fa-bars" onClick={handleMobileNav}></i>
+        </div>
       </div>
       <div className={`header-navigation ${state.mobileNav ? "active" : ""}`}>
         <ul className="header-navigation-list">
