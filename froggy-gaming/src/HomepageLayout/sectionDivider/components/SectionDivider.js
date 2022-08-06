@@ -1,10 +1,10 @@
 import React from "react";
 import "../assets/sectiondivider.css";
 
-const SectionDivider = () => {
+const SectionDivider = ({ sectionContent }) => {
   return (
     <div className="section">
-      <h3 className="section-content">Sản phẩm mới</h3>
+      <h3 className="section-content">{sectionContent}</h3>
     </div>
   );
 };

@@ -7,6 +7,7 @@
     text-align: center;
     color: $primary2;
     text-transform: uppercase;
+    margin-bottom: 5rem;
 
     &::after {
         content: "";
@@ -25,7 +26,15 @@
 @media screen and (max-width: 1024px) {
     .section {
         &-content {
-            font-size: 1.7rem;
+            font-size: 2.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        &-content {
+            font-size: 1.8rem;
         }
     }
 }

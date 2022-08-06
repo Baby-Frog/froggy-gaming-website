@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "SpaceMission";
-  src: url("../fonts/SpaceMission-rgyw9.otf");
-}
 body {
   overflow-x: hidden;
 }
@@ -198,6 +194,7 @@ body.nav-open {
   right: 1.7rem;
   top: 50%;
   transform: translateY(-50%);
+  color: #777;
 }
 .header-navigation-form-find .loading-circle {
   position: absolute;

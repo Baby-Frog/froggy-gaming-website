@@ -3,10 +3,10 @@ import HomepageCategory from "../../homepageCategory/components/HomepageCategory
 import SectionDivider from "../../sectionDivider/components/SectionDivider";
 import "../assets/homepagecontainer.css";
 
-const HomepageContainer = (props) => {
+const HomepageContainer = () => {
   return (
     <div className="homepage">
-      <SectionDivider>{props.sectionContent}</SectionDivider>
+      <SectionDivider sectionContent={"Danh mục sản phẩm"}></SectionDivider>
       <HomepageCategory></HomepageCategory>
     </div>
   );

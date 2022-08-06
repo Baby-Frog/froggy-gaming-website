@@ -9,6 +9,12 @@ function App() {
       <Nav></Nav>
       <SlickSlider></SlickSlider>
       <HomepageContainer></HomepageContainer>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

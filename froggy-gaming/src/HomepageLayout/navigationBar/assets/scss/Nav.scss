@@ -1,10 +1,5 @@
 @import "../../../../variable";
 
-@font-face {
-    font-family: "SpaceMission";
-    src: url("../fonts/SpaceMission-rgyw9.otf");
-}
-
 @mixin size($width, $height: $width) {
     width: $width;
     height: $height;
@@ -241,6 +236,8 @@ body.nav-open {
                     right: 1.7rem;
                     top: 50%;
                     transform: translateY(-50%);
+                    color: #777;
+
                 }
 
                 .loading-circle {
