@@ -2,12 +2,13 @@
 
 .section-content {
     position: relative;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 500;
     text-align: center;
     color: $primary2;
     text-transform: uppercase;
-    margin-bottom: 5rem;
+    margin-block: 5rem;
+    font-family: "CharkaPetchBold";
 
     &::after {
         content: "";
@@ -17,16 +18,51 @@
         width: 100%;
         height: 20px;
         background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: bottom;
+        background-position: center bottom;
         padding-top: 0;
+    }
+
+    h3 {
+        overflow: hidden;
+        position: relative;
+
+        &::before,
+        &::after {
+            background-color: #C8C8C8;
+            content: "";
+            display: inline-block;
+            height: 10px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+        }
+
+        &::before {
+            right: 1.5em;
+            margin-left: -50%;
+            transform: skew(12deg);
+        }
+
+        &::after {
+            left: 1.5em;
+            margin-right: -50%;
+            transform: skew(-12deg);
+        }
     }
 }
 
 @media screen and (max-width: 1024px) {
     .section {
         &-content {
-            font-size: 2.2rem;
+            font-size: 2.1rem;
+
+            h3 {
+
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -34,7 +70,7 @@
 @media screen and (max-width: 768px) {
     .section {
         &-content {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
     }
 }
