@@ -8,6 +8,7 @@ const HomepageContainer = () => {
     <div className="homepage">
       <SectionDivider sectionContent={"Danh mục sản phẩm"}></SectionDivider>
       <HomepageCategory></HomepageCategory>
+      <SectionDivider sectionContent={"Sản phẩm nổi bật"}></SectionDivider>
     </div>
   );
 };

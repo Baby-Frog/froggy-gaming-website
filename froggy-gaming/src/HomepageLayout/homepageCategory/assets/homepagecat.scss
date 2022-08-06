@@ -15,7 +15,7 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
 .homepage {
     &-category {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         column-gap: 3rem;
         row-gap: 3rem;
@@ -43,7 +43,7 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
         }
 
         &-item {
-            width: calc((100% / ($item-per-row)) - 4rem);
+            width: calc((100% / ($item-per-row)) - 3rem);
             height: 150px;
             position: relative;
             z-index: 0;
@@ -121,6 +121,7 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
             }
 
             &:nth-child(7) {
+
                 &::after {
                     background: linear-gradient(to right, $left-panel-color 0%, $left-panel-color 55%, $keycap-panel-color 55%, $keycap-panel-color 100%);
                 }
@@ -128,6 +129,7 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
             }
 
             &:nth-child(8) {
+
                 &::after {
                     background: linear-gradient(to right, $left-panel-color 0%, $left-panel-color 55%, $streaming-panel-color 55%, $streaming-panel-color 100%);
                 }
@@ -141,6 +143,7 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
 @media screen and (max-width: 1200px) {
     .homepage {
         &-category {
+            justify-content: center;
 
             &-img,
             &-name {
@@ -179,17 +182,17 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
     .homepage {
         &-category {
             &-item {
-                width: calc((200% / ($item-per-row)) - 7rem);
+                width: calc((400% / ($item-per-row)) - 7rem);
                 height: 100px;
             }
 
             &-name {
                 font-size: 1.4rem;
-                width: calc(30% - 1rem);
+                width: calc(40% - 10rem);
             }
 
             &-img {
-                width: calc(70% - 1rem);
+                width: calc(60% - 10rem);
                 object-fit: cover;
             }
         }
