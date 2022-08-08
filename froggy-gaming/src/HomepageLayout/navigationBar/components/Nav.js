@@ -50,11 +50,16 @@ const Nav = () => {
       type: "SET_LOADING",
       payload: true,
     });
+    if (state.query.trim().length === 0) {
+      dispatch({
+        type: "SET_LOADING",
+        payload: false,
+      });
+    }
     try {
       const response = await axios.get(
         `https://api.themoviedb.org/3/search/movie?api_key=3ce49afbabd14f11e4b7097cf42c2ab9&query=${state.query}`
       );
-
       dispatch({
         type: "SET_DATA",
         payload: response.data?.results || [],
