@@ -1,14 +1,14 @@
 @import "../../../variable";
-$keyboard-panel-color:#F9495F;
-$mouse-panel-color: #07bd07;
+$keyboard-panel-color:#f96677;
+$mouse-panel-color: #41de41;
 $headphone-panel-color:#FFD7BC;
-$microphone-panel-color: #665DEA;
-$gamingchar-panel-color: #e8dd01;
+$microphone-panel-color: #9790f7;
+$gamingchar-panel-color: #f8ef54;
 $mousepad-panel-color: #6f6dc7;
 $keycap-panel-color: #2F4858;
 $streaming-panel-color: #abebfc;
 $left-panel-color:#29324E;
-$item-per-row: 4;
+$item-per-row: 3;
 $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
 
 
@@ -24,7 +24,7 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
 
         &-name,
         &-img {
-            width: calc(50% - 1rem);
+            width: calc(50% - 5rem);
             z-index: 1;
         }
 
@@ -52,10 +52,12 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
             justify-content: space-around;
             align-items: center;
             overflow: hidden;
-
             cursor: pointer;
+            transition: all 200ms ease-in-out;
 
             &:hover {
+                transform: scale(1.05);
+
                 &::after {
                     left: 40%;
                 }
@@ -151,7 +153,19 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
             }
 
             &-item {
-                width: calc((200% / ($item-per-row)) - 10rem);
+                width: calc((100% / ($item-per-row)) - 7rem);
+
+                &:hover {
+                    transform: none;
+
+                    &::after {
+                        left: 50%;
+                    }
+
+                    .homepage-category-img {
+                        transform: translateX(2rem);
+                    }
+                }
             }
         }
     }
@@ -161,7 +175,7 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
     .homepage {
         &-category {
             &-item {
-                width: calc((200% / ($item-per-row)) - 7rem);
+                width: calc((100% / ($item-per-row - 1)) - 7rem);
                 height: 100px;
             }
 
@@ -178,11 +192,11 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
     }
 }
 
-@media screen and (max-width: 442px) {
+@media screen and (max-width: 472px) {
     .homepage {
         &-category {
             &-item {
-                width: calc((400% / ($item-per-row)) - 7rem);
+                width: calc((100% / ($item-per-row - 3)) - 7rem);
                 height: 100px;
             }
 

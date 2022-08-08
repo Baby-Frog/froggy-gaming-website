@@ -23,7 +23,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-class ReactCustomArrow extends React.Component {
+class SlickSlider extends React.Component {
   render() {
     var settings = {
       autoplay: true,
@@ -63,4 +63,4 @@ class ReactCustomArrow extends React.Component {
   }
 }
 
-export default ReactCustomArrow;
+export default SlickSlider;

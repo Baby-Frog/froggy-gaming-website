@@ -220,7 +220,7 @@ body.nav-open {
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            width: 350px;
+            width: 370px;
             z-index: 4;
 
             &-find {
@@ -292,21 +292,70 @@ body.nav-open {
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
+                height: 250px;
+                overflow-y: scroll;
+                margin-block: 1rem;
+                width: 100%;
 
-                span {
+                &-flex {
 
-                    &:first-of-type {
-                        margin-top: 2rem;
-                    }
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-block: 1rem;
+                }
 
-                    font-size: 1.5rem;
-                    background: rgba($color: gray, $alpha: 0.5);
-                    border-radius: 8px;
-                    padding: 1rem;
+                &-img {
 
-                    &:first:first-of-type {
-                        margin-top: 2rem;
-                    }
+                    width: calc(40% - 1rem);
+                    cursor: pointer;
+                }
+
+                &-description {
+                    width: calc(60% - 1rem);
+                    cursor: pointer;
+                }
+
+
+                &-img {
+                    height: 150px;
+                    border-radius: 1rem;
+                }
+
+                &-description {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+
+                &-title {
+
+                    color: black;
+                    font-family: "CharkaPetchBold";
+                    font-size: 1.6rem;
+                }
+
+                &-overview {
+                    display: -webkit-box;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    color: #777;
+                    font-size: 1.2rem;
+                    font-family: "roboto", "Poppins";
+                    font-weight: 500;
+                }
+
+                &-vote {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 1rem;
+                }
+
+                &-voteavg {
+                    color: #666;
+                    font-size: 1.3rem;
                 }
             }
 
