@@ -7,7 +7,7 @@ import LoadingSkeleton from "../../../SkeletonLoading/LoadingSkeleton";
 
 const initialState = {
   data: [],
-  query: "spider",
+  query: "",
   loading: true,
   mobileNav: false,
 };
@@ -44,13 +44,8 @@ const Nav = () => {
       isMounted.current = false;
     };
   }, []);
+
   handleFetchData.current = async () => {
-    if (state.query.trim().length === 0) {
-      dispatch({
-        type: "SET_QUERY",
-        payload: "",
-      });
-    }
     dispatch({
       type: "SET_LOADING",
       payload: true,
@@ -59,6 +54,7 @@ const Nav = () => {
       const response = await axios.get(
         `https://api.themoviedb.org/3/search/movie?api_key=3ce49afbabd14f11e4b7097cf42c2ab9&query=${state.query}`
       );
+
       dispatch({
         type: "SET_DATA",
         payload: response.data?.results || [],
@@ -122,7 +118,12 @@ const Nav = () => {
                 />
               </div>
               {state.loading && (
-                <div className="header-navigation-form-query">
+                <div
+                  className="header-navigation-form-query"
+                  style={{
+                    height: state.query.trim().length === 0 ? "0px" : "260px",
+                  }}
+                >
                   <ProductItemsSkeleton></ProductItemsSkeleton>
                   <ProductItemsSkeleton></ProductItemsSkeleton>
                   <ProductItemsSkeleton></ProductItemsSkeleton>
@@ -132,9 +133,15 @@ const Nav = () => {
                 </div>
               )}
               {!state.loading && (
-                <div className="header-navigation-form-query">
-                  {state.query &&
-                    state.data.length > 0 &&
+                <div
+                  className="header-navigation-form-query"
+                  style={{
+                    height: state.query.trim().length === 0 ? "0px" : "260px",
+                    marginBlock:
+                      state.query.trim().length === 0 ? "0px" : "1rem",
+                  }}
+                >
+                  {state.data.length > 0 &&
                     state.data.map((item, index) => (
                       <ProductItems key={item.id} data={item}></ProductItems>
                     ))}
@@ -180,7 +187,12 @@ const Nav = () => {
                 )}
               </div>
               {state.loading && (
-                <div className="header-navigation-form-query">
+                <div
+                  className="header-navigation-form-query"
+                  style={{
+                    height: state.query.trim().length === 0 ? "0px" : "260px",
+                  }}
+                >
                   <ProductItemsSkeleton></ProductItemsSkeleton>
                   <ProductItemsSkeleton></ProductItemsSkeleton>
                   <ProductItemsSkeleton></ProductItemsSkeleton>
@@ -190,9 +202,16 @@ const Nav = () => {
                 </div>
               )}
               {!state.loading && (
-                <div className="header-navigation-form-query">
+                <div
+                  className="header-navigation-form-query"
+                  style={{
+                    height: state.query.trim().length === 0 ? "0px" : "260px",
+                    marginBlock:
+                      state.query.trim().length === 0 ? "0px" : "1rem",
+                  }}
+                >
                   {state.data.length > 0 &&
-                    state.data.map((item, index) => (
+                    state.data.map((item) => (
                       <ProductItems key={item.id} data={item}></ProductItems>
                     ))}
                   {state.data.length <= 0 && (

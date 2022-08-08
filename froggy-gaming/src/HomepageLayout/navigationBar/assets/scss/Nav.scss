@@ -292,9 +292,7 @@ body.nav-open {
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
-                height: 250px;
                 overflow-y: scroll;
-                margin-block: 1rem;
                 width: 100%;
 
                 &-flex {
@@ -366,6 +364,7 @@ body.nav-open {
                 font-size: 1.2rem;
                 border-radius: 1rem;
                 padding: 1rem;
+                text-align: center;
             }
         }
 
