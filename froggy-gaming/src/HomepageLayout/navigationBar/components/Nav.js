@@ -59,7 +59,6 @@ const Nav = () => {
       const response = await axios.get(
         `https://api.themoviedb.org/3/search/movie?api_key=3ce49afbabd14f11e4b7097cf42c2ab9&query=${state.query}`
       );
-      console.log(response.data?.results);
       dispatch({
         type: "SET_DATA",
         payload: response.data?.results || [],
@@ -122,18 +121,30 @@ const Nav = () => {
                   )}
                 />
               </div>
-              <div className="header-navigation-form-query">
-                {state.query &&
-                  state.data.length > 0 &&
-                  state.data.map((item, index) => (
-                    <ProductItems key={item.id} data={item}></ProductItems>
-                  ))}
-                {state.data.length <= 0 && (
-                  <div className="header-navigation-form-notfound">
-                    Không có sản phẩm nào
-                  </div>
-                )}
-              </div>
+              {state.loading && (
+                <div className="header-navigation-form-query">
+                  <ProductItemsSkeleton></ProductItemsSkeleton>
+                  <ProductItemsSkeleton></ProductItemsSkeleton>
+                  <ProductItemsSkeleton></ProductItemsSkeleton>
+                  <ProductItemsSkeleton></ProductItemsSkeleton>
+                  <ProductItemsSkeleton></ProductItemsSkeleton>
+                  <ProductItemsSkeleton></ProductItemsSkeleton>
+                </div>
+              )}
+              {!state.loading && (
+                <div className="header-navigation-form-query">
+                  {state.query &&
+                    state.data.length > 0 &&
+                    state.data.map((item, index) => (
+                      <ProductItems key={item.id} data={item}></ProductItems>
+                    ))}
+                  {state.data.length <= 0 && (
+                    <div className="header-navigation-form-notfound">
+                      Không có sản phẩm nào
+                    </div>
+                  )}
+                </div>
+              )}
             </form>
           </li>
           <li className="header-navigation-item">Tin tức</li>
