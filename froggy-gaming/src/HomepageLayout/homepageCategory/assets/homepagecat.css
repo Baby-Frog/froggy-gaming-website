@@ -119,9 +119,9 @@
        object-fit: cover;
   }
 }
-@media screen and (max-width: 472px) {
+@media screen and (max-width: 452px) {
   .homepage-category-item {
-    width: calc(Infinity% - 7rem);
+    width: calc(100% - 7rem);
     height: 100px;
   }
   .homepage-category-name {

@@ -481,6 +481,9 @@ body.nav-open {
   .header-navigation-form-input::placeholder {
     font-size: 1.3rem;
   }
+  .header-navigation-form-query {
+    overflow-x: hidden;
+  }
   .header-brand {
     display: inline-flex;
     font-size: 1.9rem;

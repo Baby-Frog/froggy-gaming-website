@@ -192,11 +192,11 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
     }
 }
 
-@media screen and (max-width: 472px) {
+@media screen and (max-width: 452px) {
     .homepage {
         &-category {
             &-item {
-                width: calc((100% / ($item-per-row - 3)) - 7rem);
+                width: calc((100% / ($item-per-row - 2)) - 7rem);
                 height: 100px;
             }
 
