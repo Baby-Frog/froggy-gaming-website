@@ -33,4 +33,9 @@ export const SliderData = [
     image:
       "https://akkogear.com.vn/wp-content/uploads/2022/04/AKKO-3098B-3098N-Banner.jpg",
   },
+  {
+    id: 8,
+    image:
+      "https://hoangphuongtek.com/wp-content/uploads/2021/03/Banner-EVGA-X15-X17-X20.jpg",
+  },
 ];

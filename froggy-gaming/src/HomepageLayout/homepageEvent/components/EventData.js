@@ -2,7 +2,7 @@ export const EventData = [
   {
     id: 1,
     image_url:
-      "https://hoangphuongtek.com/wp-content/uploads/2021/03/Banner-EVGA-X15-X17-X20.jpg",
+      "https://theartisankeycap.com/wp-content/uploads/2021/11/artisan-keycap-banner.jpg",
   },
   {
     id: 2,
@@ -17,6 +17,6 @@ export const EventData = [
   {
     id: 4,
     image_url:
-      "https://hoangphuongtek.com/wp-content/uploads/2021/03/Banner-EVGA-Z15-Z20.jpg",
+      "https://akko.vn/wp-content/uploads/2022/01/ban-phim-akko-pc75b-plus-year-of-tiger-banner-akkovbn-1400x511.jpg",
   },
 ];

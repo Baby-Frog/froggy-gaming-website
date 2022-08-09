@@ -1,7 +1,11 @@
+:root {
+  --ratio: 2.74;
+}
+
 .event {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 300px);
+  grid-template-rows: repeat(2, auto);
   grid-gap: 15px;
   grid-template-areas: "img1 img1 img2" "img3 img4 img4";
 }
@@ -32,19 +36,11 @@
   grid-area: img4;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 950px) {
   .event {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(3, auto);
     padding: 0 3.8rem 3.8rem 3.8rem;
     grid-template-areas: "img1 img1 img1 img1" "img4 img4 img4 img4" "img2 img2 img3 img3";
-  }
-}
-@media screen and (max-width: 768px) {
-  .event {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    padding: 0 3.8rem 3.8rem 3.8rem;
-    grid-template-areas: "img1 img1 img1 img1" "img4 img4 img4 img4" "img2 img2 img2 img2" "img3 img3 img3 img3";
   }
 }/*# sourceMappingURL=homepageevent.css.map */
