@@ -60,6 +60,7 @@ const Nav = () => {
       const response = await axios.get(
         `https://api.themoviedb.org/3/search/movie?api_key=3ce49afbabd14f11e4b7097cf42c2ab9&query=${state.query}`
       );
+      console.log(response.data);
       dispatch({
         type: "SET_DATA",
         payload: response.data?.results || [],
@@ -71,7 +72,7 @@ const Nav = () => {
         });
       }, 1500);
     } catch (error) {
-      console.log(error);
+      return error;
     }
   };
   const handleMobileNav = () => {
