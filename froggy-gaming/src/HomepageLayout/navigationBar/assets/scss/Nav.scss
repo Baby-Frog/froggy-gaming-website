@@ -121,9 +121,17 @@ body.nav-open {
             padding: 1.2rem 0;
             text-transform: uppercase;
             font-weight: 500;
-            color: #0a0a0a;
+            color: $secondary2;
             cursor: pointer;
             transition: all 200ms linear;
+
+            &--flex {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 0.5rem;
+                position: relative;
+            }
 
 
             &:hover {
@@ -144,7 +152,23 @@ body.nav-open {
                 cursor: default;
             }
 
-            &:nth-child(10) {
+            &:nth-child(2) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    @include size(100%, 1rem);
+                }
+
+                &:hover {
+                    .category {
+                        display: block;
+                    }
+                }
+            }
+
+            &:nth-child(9) {
                 position: relative;
                 display: block;
 
@@ -508,9 +532,10 @@ body.nav-open {
                 width: 100%;
                 padding: 1.2rem 1.4rem 1.2rem 2.4rem;
                 transition: background-color 150ms ease-in-out;
-                color: rgba(102, 102, 102, .85);
+                color: #333f61;
                 font-size: 1.3rem;
                 border-top: 1px solid rgba($color: #ccc, $alpha: 0.4);
+
 
                 &:not(:first-child):active {
                     color: black;
@@ -521,7 +546,7 @@ body.nav-open {
                     margin-left: 0;
                 }
 
-                &:nth-child(10) {
+                &:nth-child(9) {
                     display: none;
                 }
 

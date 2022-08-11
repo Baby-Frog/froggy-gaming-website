@@ -1,12 +1,12 @@
 import "./App.css";
-import MovieSearchApp from "./HomepageLayout/navigationBar/components/Nav";
+import Nav from "./HomepageLayout/navigationBar/components/Nav";
 import SlickSlider from "./HomepageLayout/homepageSlider/components/SlickSlider";
 import HomepageContainer from "./HomepageLayout/homepageContainer/components/HomepageContainer";
 
 function App() {
   return (
     <div>
-      <MovieSearchApp></MovieSearchApp>
+      <Nav></Nav>
       <SlickSlider></SlickSlider>
       <HomepageContainer></HomepageContainer>
     </div>
