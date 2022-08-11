@@ -8,7 +8,7 @@ const HomepageEvent = () => {
       {EventData.length > 0 &&
         EventData.map((item, index) => (
           <div className="event-item" key={index}>
-            <img src={item.image_url} alt="" className="event-item-img" />
+            <img src={item.image_url} alt="Event" className="event-item-img" />
           </div>
         ))}
     </div>

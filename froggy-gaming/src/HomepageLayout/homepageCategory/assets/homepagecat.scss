@@ -39,7 +39,7 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
             -webkit-user-drag: none;
             object-fit: cover;
             transform: translateX(2rem);
-            transition: transform 200ms $hover-animation;
+            transition: transform 150ms $hover-animation;
         }
 
         &-item {
@@ -53,7 +53,7 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
             align-items: center;
             overflow: hidden;
             cursor: pointer;
-            transition: all 200ms ease-in-out;
+            transition: all 150ms ease-in-out;
 
             &:hover {
                 transform: scale(1.05);
@@ -196,19 +196,18 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
     .homepage {
         &-category {
             &-item {
-                width: calc((100% / ($item-per-row - 2)) - 7rem);
+                width: calc((100% / ($item-per-row - 1)) - 5rem);
                 height: 100px;
             }
 
             &-name {
                 font-size: 1.4rem;
-                width: calc(40% - 8rem);
+                width: calc(50% - 1rem);
             }
 
             &-img {
-                width: calc(60% - 8rem);
-                object-fit: cover;
-
+                width: calc(50% - 1rem);
+                height: auto;
             }
         }
     }

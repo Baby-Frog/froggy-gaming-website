@@ -23,7 +23,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   transform: translateX(2rem);
-  transition: transform 200ms cubic-bezier(0.7, 0.3, 0.5, 0.45);
+  transition: transform 150ms cubic-bezier(0.7, 0.3, 0.5, 0.45);
 }
 .homepage-category-item {
   width: calc(33.3333333333% - 3rem);
@@ -36,7 +36,7 @@
   align-items: center;
   overflow: hidden;
   cursor: pointer;
-  transition: all 200ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 .homepage-category-item:hover {
   transform: scale(1.05);
@@ -121,16 +121,15 @@
 }
 @media screen and (max-width: 452px) {
   .homepage-category-item {
-    width: calc(100% - 7rem);
+    width: calc(50% - 5rem);
     height: 100px;
   }
   .homepage-category-name {
     font-size: 1.4rem;
-    width: calc(40% - 8rem);
+    width: calc(50% - 1rem);
   }
   .homepage-category-img {
-    width: calc(60% - 8rem);
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: calc(50% - 1rem);
+    height: auto;
   }
 }/*# sourceMappingURL=homepagecat.css.map */
