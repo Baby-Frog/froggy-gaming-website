@@ -454,6 +454,16 @@ body.nav-open {
     font-size: 1.3rem;
     border-top: 1px solid rgba(204, 204, 204, 0.4);
   }
+  .header-navigation-item--flex {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .header-navigation-item--flex svg {
+    display: none;
+  }
+  .header-navigation-item--flex i {
+    display: none;
+  }
   .header-navigation-item:not(:first-child):active {
     color: black;
     background-color: #ccc;

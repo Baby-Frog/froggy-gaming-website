@@ -112,4 +112,10 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1024px) {
+  .category {
+    display: none;
+  }
 }/*# sourceMappingURL=dropdown.css.map */

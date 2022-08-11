@@ -536,6 +536,18 @@ body.nav-open {
                 font-size: 1.3rem;
                 border-top: 1px solid rgba($color: #ccc, $alpha: 0.4);
 
+                &--flex {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    svg {
+                        display: none;
+                    }
+
+                    i {
+                        display: none;
+                    }
+                }
 
                 &:not(:first-child):active {
                     color: black;
