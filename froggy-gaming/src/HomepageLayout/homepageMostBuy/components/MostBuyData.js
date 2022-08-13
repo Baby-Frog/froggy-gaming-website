@@ -1,5 +1,5 @@
-import Product1 from "../assets/img/ban-phim-akko-pc75b-plus-year-of-tiger.png";
-import Product2 from "../assets/img/image-removebg.png";
+import Product1 from "../assets/img/akkotiger.png";
+import Product2 from "../assets/img/akkohonkai.png";
 export const MostBuyData = [
   {
     id: 1,
