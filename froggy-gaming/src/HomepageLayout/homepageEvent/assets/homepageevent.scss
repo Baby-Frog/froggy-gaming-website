@@ -47,6 +47,14 @@
 
 }
 
+
+@media screen and (max-width: 1536px) {
+    .event {
+        padding: 0 4.8rem 4.8rem 4.8rem;
+
+    }
+}
+
 @media screen and (max-width: 950px) {
     .event {
         grid-template-columns: repeat(4, 1fr);

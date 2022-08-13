@@ -142,7 +142,8 @@ $hover-animation: cubic-bezier(0.7, 0.3, 0.5, 0.45);
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1536px) {
+
     .homepage {
         &-category {
             justify-content: center;

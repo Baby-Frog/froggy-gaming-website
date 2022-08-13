@@ -43,7 +43,7 @@
   transform: skew(-12deg);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1536px) {
   .section-content {
     font-size: 2.1rem;
   }
