@@ -1,4 +1,4 @@
-import Product1 from "../assets/img/ban-phim-akko-pc75b-plus-year-of-tiger-ava01-1-removebg.png";
+import Product1 from "../assets/img/ban-phim-akko-pc75b-plus-year-of-tiger.png";
 import Product2 from "../assets/img/image-removebg.png";
 export const MostBuyData = [
   {
