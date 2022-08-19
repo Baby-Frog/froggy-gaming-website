@@ -52,7 +52,7 @@
             position: absolute;
             bottom: 3rem;
             right: 3rem;
-            background: $secondary2;
+            background: rgba($color: $secondary2, $alpha: 0.8);
             padding: 2rem;
             color: white;
             font-size: 2rem;
@@ -72,6 +72,11 @@
     .event {
         padding: 0 4.8rem 4.8rem 4.8rem;
 
+        &-item {
+            &::after {
+                font-size: 1.5rem;
+            }
+        }
     }
 }
 
@@ -85,5 +90,10 @@
             "img4 img4 img4 img4"
             "img2 img2 img3 img3";
 
+        &-item {
+            &::after {
+                display: none;
+            }
+        }
     }
 }

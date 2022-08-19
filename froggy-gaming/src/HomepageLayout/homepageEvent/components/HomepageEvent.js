@@ -12,7 +12,7 @@ const HomepageEvent = () => {
               className="event-item"
               data-aos="fade-up"
               data-aos-duration="500"
-              data-aos-offset="200"
+              data-aos-offset="300"
               data-aos-once="true"
             >
               <img

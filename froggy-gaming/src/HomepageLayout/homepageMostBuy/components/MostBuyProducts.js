@@ -1,8 +1,10 @@
 import React from "react";
 import { MostBuyData } from "./MostBuyData";
 import "../assets/relevance.css";
+import { Fragment } from "react";
 
 const MostBuyProducts = () => {
+  console.log(MostBuyData);
   return (
     <div className="relevance">
       {MostBuyData.length > 0 &&
@@ -17,13 +19,11 @@ const MostBuyProducts = () => {
               <div className="relevance-name">{item.product_name}</div>
               <div className="relevance-compatible">
                 {/* Hotswap, Bluetooth, Wireless, ... */}
-                {MostBuyData.map((item) => (
-                  <div className="relevance-compatible-item" key={item.id}>
-                    {item.product_compatible.map((item, index) => (
-                      <img src={item} alt="k" key={index} />
-                    ))}
-                  </div>
-                ))}
+                <div className="relevance-compatible-item">
+                  {item.product_compatible.map((item) => (
+                    <img src={item} alt="k" />
+                  ))}
+                </div>
               </div>
               {/* Grid */}
               <div className="relevance-specification">

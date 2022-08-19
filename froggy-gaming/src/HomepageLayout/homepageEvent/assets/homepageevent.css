@@ -41,7 +41,7 @@
   position: absolute;
   bottom: 3rem;
   right: 3rem;
-  background: #29324E;
+  background: rgba(41, 50, 78, 0.8);
   padding: 2rem;
   color: white;
   font-size: 2rem;
@@ -56,6 +56,9 @@
   .event {
     padding: 0 4.8rem 4.8rem 4.8rem;
   }
+  .event-item::after {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (max-width: 950px) {
   .event {
@@ -63,5 +66,8 @@
     grid-template-rows: repeat(3, auto);
     padding: 0 3.8rem 3.8rem 3.8rem;
     grid-template-areas: "img1 img1 img1 img1" "img4 img4 img4 img4" "img2 img2 img3 img3";
+  }
+  .event-item::after {
+    display: none;
   }
 }/*# sourceMappingURL=homepageevent.css.map */
