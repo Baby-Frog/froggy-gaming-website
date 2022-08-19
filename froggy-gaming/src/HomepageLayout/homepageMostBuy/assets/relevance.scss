@@ -61,12 +61,12 @@ $bottom-label-2: #00F9C9;
             content: "";
             position: absolute;
             top: 0rem;
-            left: 0rem;
+            left: -2rem;
             width: 140%;
             height: 140%;
-            background: linear-gradient(to bottom, white 0%, white 40%, $bottom-label-2 40%, $bottom-label-2 100%);
+            background: linear-gradient(to bottom, white 0%, white 40%, $bottom-label-1 40.33%, $bottom-label-1 100%);
             z-index: -1;
-            transform: skewY(12deg);
+            transform: rotate(12deg);
         }
 
         &:nth-child(1) {
