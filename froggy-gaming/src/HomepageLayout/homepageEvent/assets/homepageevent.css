@@ -10,12 +10,30 @@
   grid-gap: 15px;
   grid-template-areas: "img1 img1 img2" "img3 img4 img4";
 }
-
-.event-item {
+.event-aos {
   border-radius: 1rem;
-  overflow: hidden;
   transition: all 200ms ease-in-out;
   cursor: pointer;
+  position: relative;
+}
+.event-aos:hover {
+  transform: scale(1.02);
+}
+.event-aos:nth-child(1) {
+  grid-area: img1;
+}
+.event-aos:nth-child(2) {
+  grid-area: img2;
+}
+.event-aos:nth-child(3) {
+  grid-area: img3;
+}
+.event-aos:nth-child(4) {
+  grid-area: img4;
+}
+.event-item {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 .event-item::after {
@@ -29,24 +47,9 @@
   font-size: 2rem;
   font-family: "CharkaPetchBold";
 }
-.event-item:hover {
-  transform: scale(1.02);
-}
 .event-item img {
   width: 100%;
   height: 100%;
-}
-.event-item:nth-child(1) {
-  grid-area: img1;
-}
-.event-item:nth-child(2) {
-  grid-area: img2;
-}
-.event-item:nth-child(3) {
-  grid-area: img3;
-}
-.event-item:nth-child(4) {
-  grid-area: img4;
 }
 
 @media screen and (max-width: 1536px) {
