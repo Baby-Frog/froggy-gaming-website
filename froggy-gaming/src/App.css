@@ -55,8 +55,8 @@ body {
 }
 
 body {
+  height: 100vh;
   line-height: 1.5;
-  background: #F4F4F4;
 }
 
 img,
