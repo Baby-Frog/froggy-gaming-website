@@ -133,7 +133,7 @@
 
         &:hover {
             color: transparent;
-            background-image: linear-gradient(to right, $primary2 30%, $secondary 60%, $secondary 100%);
+            background-image: linear-gradient(to right, $primary2, $secondary);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;

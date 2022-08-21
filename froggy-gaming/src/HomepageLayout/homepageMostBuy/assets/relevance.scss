@@ -8,17 +8,18 @@ $bottom-label-2: #00F9C9;
 
 .relevance {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-gap: 15px;
     grid-template-areas:
-        "r1 r2 r5"
-        "r3 r4 r5";
+        "r1 r2 r5 r5"
+        "r3 r4 r5 r5";
+
 
     &-name {
         font-size: 2.4rem;
         font-weight: 500;
-        font-family: "CharkaPetchBold";
+        font-family: "Roboto";
     }
 
     &-compatible {
@@ -54,10 +55,65 @@ $bottom-label-2: #00F9C9;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        row-gap: 4rem;
+        row-gap: 4.2rem;
         z-index: 3;
+        border-radius: 12px;
         cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         transition: all 150ms ease-in-out;
+
+        &:nth-of-type(5) {
+
+            .relevance-img,
+            .relevance-description {
+                z-index: 3;
+            }
+
+            .relevance-img {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .relevance-specification {
+                grid-template-rows: repeat(2, 120px);
+
+                svg {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                i {
+                    font-size: 3.5rem;
+                }
+
+                &-text {
+                    font-size: 2.2rem;
+                }
+
+                &-title {
+                    font-size: 2rem;
+                }
+
+                &-item {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        path {
+            stroke: $secondary2;
+        }
+
+        i {
+            font-size: 2.5rem;
+        }
+
+        ion-icon {
+            font-size: 2.2rem;
+        }
+
 
         &:hover {
             transform: scale(1.03);
@@ -69,7 +125,14 @@ $bottom-label-2: #00F9C9;
         }
 
         .relevance-img {
-            width: 50%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:not(:last-of-type) {
+                transform: translateY(1.2rem);
+            }
         }
 
         .relevance-description {
@@ -96,6 +159,10 @@ $bottom-label-2: #00F9C9;
 
         &:nth-child(even),
         &:nth-child(5) {
+            .relevance-name {
+                color: $secondary2;
+            }
+
             &::after {
                 background: linear-gradient(to bottom, white 0%, white 20%, $bottom-label-2 20.33%, $bottom-label-2 100%);
             }
@@ -123,32 +190,81 @@ $bottom-label-2: #00F9C9;
     }
 
     &-specification {
-        background: white;
         color: black;
         width: 90%;
         margin-block: 1rem;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        position: relative;
         grid-template-rows: repeat(2, auto);
-
         grid-template-areas:
             "brand brand weight weight"
-            "keycap switch layout feature";
+            "keycap switch switch layout";
 
+        &-item {
+            display: flex;
+            padding: 1rem;
+            column-gap: 1rem;
+            align-items: center;
 
-        div {
-            padding: 1.5rem;
-            border: 1px solid #eeeeee;
-            text-align: center;
-            font-size: 1.5rem;
+            &::after,
+            &::before {
+                background-color: #f5f5f5;
+            }
+        }
+
+        &-info {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        &-title {
+            font-size: 1.3rem;
+            flex-shrink: 0;
             font-family: "Roboto", "CharkaPetchBold";
+
+            &--small {
+                font-size: 1rem;
+            }
+        }
+
+        &-text {
+            font-size: 1.5rem;
             font-weight: 500;
+
+            &--small {
+                font-size: 1.1rem;
+            }
+        }
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: white;
+            transform: skew(-13deg);
+            z-index: -1;
         }
     }
 
     &-brand {
         grid-area: brand;
+        position: relative;
 
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+        }
     }
 
     &-weight {
@@ -157,17 +273,61 @@ $bottom-label-2: #00F9C9;
 
     &-keycap {
         grid-area: keycap;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(100% - 4px);
+            height: 2px;
+            top: 0;
+            left: 4px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            top: 0;
+            right: 0;
+        }
     }
 
     &-switch {
         grid-area: switch;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+        }
     }
 
     &-layout {
         grid-area: layout;
-    }
+        position: relative;
 
-    &-feature {
-        grid-area: feature;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% - 2px);
+            height: 2px;
+        }
     }
 }

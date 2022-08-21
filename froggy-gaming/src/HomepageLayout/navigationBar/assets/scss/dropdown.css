@@ -110,7 +110,7 @@
 }
 .category-choice:hover {
   color: transparent;
-  background-image: linear-gradient(to right, #6d9c00 30%, #F7A05A 60%, #F7A05A 100%);
+  background-image: linear-gradient(to right, #6d9c00, #F7A05A);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

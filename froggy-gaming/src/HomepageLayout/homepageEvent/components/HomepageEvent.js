@@ -8,13 +8,7 @@ const HomepageEvent = () => {
       {EventData.length > 0 &&
         EventData.map((item, index) => (
           <div className="event-aos" key={item.id}>
-            <div
-              className="event-item"
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-offset="300"
-              data-aos-once="true"
-            >
+            <div className="event-item">
               <img
                 src={item.image_url}
                 alt="Event"
