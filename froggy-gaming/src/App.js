@@ -4,6 +4,7 @@ import SlickSlider from "./HomepageLayout/homepageSlider/components/SlickSlider"
 import HomepageContainer from "./HomepageLayout/homepageContainer/components/HomepageContainer";
 import { useEffect } from "react";
 import Aos from "aos";
+import ContactBar from "./FixedContactBar/ContactBar";
 
 function App() {
   useEffect(() => {
@@ -14,6 +15,7 @@ function App() {
       <Nav></Nav>
       <SlickSlider></SlickSlider>
       <HomepageContainer></HomepageContainer>
+      <ContactBar></ContactBar>
     </div>
   );
 }

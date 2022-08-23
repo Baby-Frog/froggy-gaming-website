@@ -1,0 +1,35 @@
+.contact-bar {
+  position: fixed;
+  padding: 1rem;
+  box-shadow: 12px 0 34px #888;
+  border-radius: 12px 0 0 12px;
+  right: 0;
+  top: 50%;
+  transform: translate(calc(100% - 5rem), -50%);
+  transition: all 150ms ease-out;
+  background: white;
+  z-index: 999;
+}
+.contact-bar:hover {
+  transform: translate(0rem, -50%);
+}
+.contact-bar-item {
+  margin-bottom: 1rem;
+}
+.contact-bar-list {
+  list-style-type: none;
+}
+.contact-bar-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+.contact-bar-info:hover .contact-bar-name {
+  color: #6d9c00;
+}
+.contact-bar-name {
+  color: black;
+  font-size: 1.7rem;
+}/*# sourceMappingURL=contactbar.css.map */
