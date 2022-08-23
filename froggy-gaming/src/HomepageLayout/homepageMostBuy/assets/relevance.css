@@ -119,8 +119,8 @@
   position: absolute;
   top: 0rem;
   left: -7.4rem;
-  width: 140%;
-  height: 140%;
+  width: 160%;
+  height: 160%;
   background: linear-gradient(to bottom, white 0%, white 20%, #D32033 20.33%, #D32033 100%);
   z-index: 2;
   transform: rotate(12deg);
@@ -264,4 +264,69 @@
   left: 0;
   width: calc(100% - 2px);
   height: 2px;
+}
+
+@media screen and (max-width: 1436px) {
+  .relevance {
+    padding: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "r1 r2" "r3 r4" "r5 r5";
+  }
+}
+@media screen and (max-width: 1024px) {
+  .relevance-compatible img {
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+  }
+  .relevance-name {
+    font-size: 1rem;
+  }
+  .relevance-item::after {
+    background: linear-gradient(to bottom, white 0%, white 10%, #D32033 10.33%, #D32033 100%);
+  }
+  .relevance-item:nth-child(even)::after, .relevance-item:nth-child(5)::after {
+    background: linear-gradient(to bottom, white 0%, white 10%, #00F9C9 10.33%, #00F9C9 100%);
+  }
+  .relevance-item:nth-of-type(5) .relevance-name {
+    font-size: 1.5rem;
+  }
+  .relevance-item:nth-of-type(5) .relevance-specification svg {
+    width: 30px;
+    height: 30px;
+  }
+  .relevance-item:nth-of-type(5) .relevance-specification i {
+    font-size: 1.5rem;
+  }
+  .relevance-item:nth-of-type(5) .relevance-specification-title {
+    font-size: 1rem;
+  }
+  .relevance-item:nth-of-type(5) .relevance-specification-text {
+    font-size: 1.2rem;
+  }
+  .relevance-specification {
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "brand brand weight weight" "keycap keycap switch switch" "layout layout layout layout";
+    place-items: center;
+  }
+  .relevance-specification-item::after, .relevance-specification-item::before {
+    display: none;
+  }
+  .relevance-specification::after {
+    transform: none;
+  }
+  .relevance-specification svg {
+    width: 20px;
+    height: 20px;
+  }
+  .relevance-specification i {
+    font-size: 1rem;
+  }
+  .relevance-specification-title {
+    font-size: 0.5rem;
+  }
+  .relevance-specification-text {
+    font-size: 0.5rem;
+  }
 }/*# sourceMappingURL=relevance.css.map */

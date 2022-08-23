@@ -43,3 +43,9 @@
         font-size: 1.7rem;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .contact-bar {
+        display: none;
+    }
+}

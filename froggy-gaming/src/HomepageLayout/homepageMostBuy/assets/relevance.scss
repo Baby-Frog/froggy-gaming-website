@@ -150,8 +150,8 @@ $bottom-label-2: #00F9C9;
             position: absolute;
             top: 0rem;
             left: -7.4rem;
-            width: 140%;
-            height: 140%;
+            width: 160%;
+            height: 160%;
             background: linear-gradient(to bottom, white 0%, white 20%, $bottom-label-1 20.33%, $bottom-label-1 100%);
             z-index: 2;
             transform: rotate(12deg);
@@ -328,6 +328,115 @@ $bottom-label-2: #00F9C9;
             left: 0;
             width: calc(100% - 2px);
             height: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 1436px) {
+    .relevance {
+        padding: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "r1 r2"
+            "r3 r4"
+            "r5 r5";
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .relevance {
+
+        &-compatible {
+            img {
+                width: 20px;
+                height: 20px;
+                z-index: 3;
+            }
+        }
+
+        &-name {
+            font-size: 1rem;
+        }
+
+        &-item {
+            &::after {
+                background: linear-gradient(to bottom, white 0%, white 10%, $bottom-label-1 10.33%, $bottom-label-1 100%);
+            }
+
+            &:nth-child(even),
+            &:nth-child(5) {
+
+
+                &::after {
+                    background: linear-gradient(to bottom, white 0%, white 10%, $bottom-label-2 10.33%, $bottom-label-2 100%);
+                }
+            }
+
+            &:nth-of-type(5) {
+                .relevance-name {
+                    font-size: 1.5rem;
+                }
+
+                .relevance-specification {
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    i {
+                        font-size: 1.5rem;
+                    }
+
+                    &-title {
+                        font-size: 1rem;
+                    }
+
+                    &-text {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        &-specification {
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: "brand brand weight weight"
+                "keycap keycap switch switch"
+                "layout layout layout layout";
+            place-items: center;
+
+            &-item {
+
+                &::after,
+                &::before {
+
+                    display: none;
+                }
+            }
+
+            &::after {
+                transform: none;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            i {
+                font-size: 1rem;
+            }
+
+            &-title {
+                font-size: 0.5rem;
+            }
+
+            &-text {
+                font-size: 0.5rem;
+            }
+
+
         }
     }
 }
