@@ -1,0 +1,43 @@
+@import "../../../variable";
+
+.scroll-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 100rem;
+    padding: 0.7rem;
+    transform: translateY(1rem);
+    display: flex;
+    transition: all 100ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $secondary2;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+
+    &-show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    path {
+        stroke: $secondary2;
+    }
+
+    &:hover {
+        background-color: $secondary2;
+
+        path {
+            stroke: white;
+        }
+    }
+
+
+}

@@ -5,6 +5,7 @@ import HomepageContainer from "./HomepageLayout/homepageContainer/components/Hom
 import { useEffect } from "react";
 import Aos from "aos";
 import ContactBar from "./FixedContactBar/ContactBar";
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
 
 function App() {
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
       <SlickSlider></SlickSlider>
       <HomepageContainer></HomepageContainer>
       <ContactBar></ContactBar>
+      <ScrollToTop></ScrollToTop>
     </div>
   );
 }

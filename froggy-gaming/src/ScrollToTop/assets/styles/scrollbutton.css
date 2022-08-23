@@ -1,0 +1,34 @@
+.scroll-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 100rem;
+  padding: 0.7rem;
+  transform: translateY(1rem);
+  display: flex;
+  transition: all 100ms ease-in-out;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #29324E;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+}
+.scroll-button-show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.scroll-button svg {
+  width: 18px;
+  height: 18px;
+}
+.scroll-button path {
+  stroke: #29324E;
+}
+.scroll-button:hover {
+  background-color: #29324E;
+}
+.scroll-button:hover path {
+  stroke: white;
+}/*# sourceMappingURL=scrollbutton.css.map */
