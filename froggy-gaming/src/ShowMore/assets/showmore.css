@@ -1,0 +1,22 @@
+.show-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+.show-more-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 207px;
+  height: 54px;
+  background: #00448d;
+  color: #fff;
+  font-size: 16px;
+  font-family: "CharkaPetchBold";
+  border: 1px solid currentColor;
+  cursor: pointer;
+}
+.show-more-button:hover {
+  background: #29324E;
+}/*# sourceMappingURL=showmore.css.map */

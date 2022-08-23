@@ -1,7 +1,6 @@
 import React from "react";
 import { MostBuyData } from "./MostBuyData";
 import "../assets/relevance.css";
-import { Fragment } from "react";
 
 const MostBuyProducts = () => {
   console.log(MostBuyData);
