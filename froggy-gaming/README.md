@@ -2,7 +2,7 @@
 
 This is a gaming gears store website
 
-See more detail in [Froggy Gaming](https://baby-frog.github.io/froggy-gaming/)
+See more detail in [Froggy Gaming](https://baby-frog.github.io/froggy-gaming-website/)
 
 ## What we have ?
 
