@@ -9,6 +9,12 @@
   transition: all 150ms ease-out;
   background: white;
   z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+}
+.contact-bar.show {
+  opacity: 1;
+  visibility: visible;
 }
 .contact-bar:hover {
   transform: translate(0rem, -50%);

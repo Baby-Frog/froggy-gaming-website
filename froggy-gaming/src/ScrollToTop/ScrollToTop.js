@@ -7,7 +7,7 @@ const ScrollToTopButton = () => {
   const [toTop, setToTop] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 700) {
+      if (window.scrollY > 300) {
         setToTop(true);
       } else {
         setToTop(false);

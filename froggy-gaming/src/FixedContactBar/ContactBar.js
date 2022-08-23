@@ -1,11 +1,23 @@
 import React from "react";
 import { ContactBarData } from "./ContactBarData";
 import "./assets/styles/contactbar.css";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const ContactBar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    });
+  }, []);
   // fixed
   return (
-    <div className="contact-bar">
+    <div className={`contact-bar ${scrolled && "show"}`}>
       <ul className="contact-bar-list">
         {ContactBarData.length > 0 &&
           ContactBarData.map((item) => (
