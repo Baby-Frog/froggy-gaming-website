@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import $ from "jquery";
 import { Fragment } from "react";
 import "./assets/styles/scrollbutton.css";
+import useScrolled from "../hooks/useScrolled";
 
 const ScrollToTopButton = () => {
-  const [toTop, setToTop] = useState(false);
+  const { height, isScrolled, setIsScrolled } = useScrolled(300);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        setToTop(true);
+      if (window.scrollY > height) {
+        setIsScrolled(true);
       } else {
-        setToTop(false);
+        setIsScrolled(false);
       }
     });
-  }, []);
+  }, [height, setIsScrolled]);
   const scrollUp = () => {
     $("html, body").animate(
       {
@@ -26,7 +27,7 @@ const ScrollToTopButton = () => {
   return (
     <Fragment>
       <div
-        className={`scroll-button ${toTop && "scroll-button-show"}`}
+        className={`scroll-button ${isScrolled && "scroll-button-show"}`}
         onClick={scrollUp}
       >
         <svg

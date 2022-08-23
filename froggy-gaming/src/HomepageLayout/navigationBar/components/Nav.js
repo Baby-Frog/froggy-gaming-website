@@ -5,6 +5,7 @@ import "../assets/scss/Nav.css";
 import Logo from "../assets/images/froggy-gaming-logo.png";
 import LoadingSkeleton from "../../../SkeletonLoading/LoadingSkeleton";
 import NavCategory from "./NavCategory";
+import useScrolled from "../../../hooks/useScrolled";
 
 const initialState = {
   data: [],
@@ -37,6 +38,16 @@ const gamingProductsReducer = (state, action) => {
 
 const Nav = () => {
   const [state, dispatch] = useReducer(gamingProductsReducer, initialState);
+  const { height, isScrolled, setIsScrolled } = useScrolled(300);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    });
+  }, [height, setIsScrolled]);
   const handleFetchData = useRef({});
   const isMounted = useRef(true);
   useEffect(() => {
@@ -85,12 +96,17 @@ const Nav = () => {
     });
     document.body.classList.toggle("nav-open");
   };
+
   useEffect(() => {
     handleFetchData.current(state.query);
   }, [state.query]);
 
   return (
-    <div className={`header ${state.mobileNav ? "active" : ""}`}>
+    <div
+      className={`header ${state.mobileNav && "active"} ${
+        isScrolled && "header--fixed"
+      }`}
+    >
       <div className="header-hamburger-toggle">
         <i className="fa-solid fa-bars" onClick={handleMobileNav}></i>
       </div>

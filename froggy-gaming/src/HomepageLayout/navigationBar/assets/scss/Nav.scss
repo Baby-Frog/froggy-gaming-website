@@ -36,6 +36,16 @@ body.nav-open {
     align-items: center;
     margin: 0 auto;
     height: 90px;
+    top: -4rem;
+    transition: all 150ms ease-in-out;
+
+    &--fixed {
+        background: rgba($color: white, $alpha: 0.95);
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+    }
 
     &-overlay {
         position: absolute;
@@ -474,6 +484,10 @@ body.nav-open {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        &--fixed {
+            display: none;
+        }
 
         &-icon {
             width: 60px;
