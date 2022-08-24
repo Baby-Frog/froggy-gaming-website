@@ -32,4 +32,12 @@
 }
 .scroll-button:hover path {
   stroke: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .scroll-button {
+    right: 0.5rem;
+    bottom: 1rem;
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=scrollbutton.css.map */

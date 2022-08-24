@@ -23,8 +23,8 @@ body.nav-open {
   align-items: center;
   margin: 0 auto;
   height: 90px;
-  top: -4rem;
-  transition: all 150ms ease-in-out;
+  top: -9rem;
+  transition: all 650ms ease-in-out;
 }
 .header--fixed {
   background: rgba(255, 255, 255, 0.95);

@@ -1,0 +1,54 @@
+.brand {
+  position: relative;
+}
+.brand-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 2rem;
+}
+.brand-image:hover {
+  border: 2px solid #dcdcdc;
+}
+.brand-prev-arrow, .brand-next-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: rgba(128, 128, 128, 0.5);
+  color: white;
+  padding: 2rem;
+  z-index: 2;
+  cursor: pointer;
+}
+.brand-prev-arrow i, .brand-next-arrow i {
+  font-size: 1.8rem;
+}
+.brand-prev-arrow {
+  left: 0rem;
+}
+.brand-next-arrow {
+  right: 0rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .brand {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .brand-image {
+    padding: 1rem;
+  }
+  .brand-prev-arrow, .brand-next-arrow {
+    width: 15px;
+    height: 15px;
+    padding: 1rem;
+    background: none;
+    color: black;
+  }
+}/*# sourceMappingURL=brandslider.css.map */

@@ -41,7 +41,7 @@ const Nav = () => {
   const { height, isScrolled, setIsScrolled } = useScrolled(300);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
+      if (window.innerWidth > 1024 && window.scrollY > 300) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);

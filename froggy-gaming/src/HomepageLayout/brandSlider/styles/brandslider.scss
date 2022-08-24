@@ -1,0 +1,67 @@
+.brand {
+    position: relative;
+
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid transparent;
+        cursor: pointer;
+        padding: 2rem;
+
+        &:hover {
+            border: 2px solid #dcdcdc;
+        }
+    }
+
+    &-prev-arrow,
+    &-next-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background: rgba($color: gray, $alpha: 0.5);
+        color: white;
+        padding: 2rem;
+        z-index: 2;
+        cursor: pointer;
+
+        i {
+            font-size: 1.8rem;
+        }
+    }
+
+    &-prev-arrow {
+        left: 0rem;
+    }
+
+    &-next-arrow {
+        right: 0rem;
+
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .brand {
+        margin-left: 3rem;
+        margin-right: 3rem;
+
+        &-image {
+            padding: 1rem;
+
+        }
+
+        &-prev-arrow,
+        &-next-arrow {
+            width: 15px;
+            height: 15px;
+            padding: 1rem;
+            background: none;
+            color: black;
+        }
+    }
+}

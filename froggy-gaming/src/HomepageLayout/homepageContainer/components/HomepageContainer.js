@@ -1,6 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import ShowMore from "../../../ShowMore/ShowMore";
+import BrandSlider from "../../brandSlider/BrandSlider";
 import HomepageCategory from "../../homepageCategory/components/HomepageCategory";
 import HomepageEvent from "../../homepageEvent/components/HomepageEvent";
 import MostBuyProducts from "../../homepageMostBuy/components/MostBuyProducts";
@@ -18,7 +19,6 @@ const HomepageContainer = () => {
           marginBlock={"1.5rem"}
         ></SectionDivider>
         <HomepageEvent></HomepageEvent>
-        <ShowMore></ShowMore>
         <SectionDivider
           sectionContent={"Danh mục sản phẩm"}
           marginBlock={"3.5rem"}
@@ -30,6 +30,11 @@ const HomepageContainer = () => {
         ></SectionDivider>
         <MostBuyProducts></MostBuyProducts>
         <ShowMore></ShowMore>
+        <SectionDivider
+          sectionContent={"Các thương hiệu"}
+          marginBlock="1rem"
+        ></SectionDivider>
+        <BrandSlider></BrandSlider>
       </div>
     </Fragment>
   );
