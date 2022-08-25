@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useReducer } from "react";
 import lodash from "lodash";
 import axios from "axios";
-import "../assets/scss/Nav.css";
-import Logo from "../assets/images/froggy-gaming-logo.png";
+import "../styles/Nav.css";
+import Logo from "../assets/froggy-gaming-logo.png";
 import LoadingSkeleton from "../../../SkeletonLoading/LoadingSkeleton";
 import NavCategory from "./NavCategory";
 import useScrolled from "../../../hooks/useScrolled";

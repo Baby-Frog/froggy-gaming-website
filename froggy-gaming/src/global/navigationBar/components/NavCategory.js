@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../assets/scss/dropdown.css";
+import "../styles/dropdown.css";
 
 const NavCategory = () => {
   const [selected, setSelected] = useState(false);

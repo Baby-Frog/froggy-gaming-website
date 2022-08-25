@@ -1,10 +1,11 @@
 import "./App.css";
-import Nav from "./HomepageLayout/navigationBar/components/Nav";
 import HomepageContainer from "./HomepageLayout/homepageContainer/components/HomepageContainer";
 import { useEffect } from "react";
 import Aos from "aos";
 import ContactBar from "./FixedContactBar/ContactBar";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
+import Nav from "./global/navigationBar/components/Nav";
+import Footer from "./global/footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
       <HomepageContainer></HomepageContainer>
       <ContactBar></ContactBar>
       <ScrollToTop></ScrollToTop>
+      <Footer></Footer>
     </div>
   );
 }

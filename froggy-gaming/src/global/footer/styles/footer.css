@@ -1,0 +1,39 @@
+.footer {
+  padding: 2rem;
+  background: #29324E;
+  border-top: 1px solid #ccc;
+  background: #262626;
+}
+.footer-container {
+  margin: 0 auto;
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  place-items: start center;
+}
+.footer-content:last-of-type .footer-column {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+.footer-content:last-of-type .footer-column i {
+  font-size: 2.6rem;
+}
+.footer-content .footer-column {
+  margin-top: 2rem;
+}
+.footer-row {
+  font-family: "CharkaPetchRegular";
+  list-style-type: none;
+  color: white;
+}
+.footer-row h3 {
+  font-size: 2rem;
+}
+.footer-item {
+  font-size: 1.6rem;
+  cursor: pointer;
+  line-height: 2.2;
+}/*# sourceMappingURL=footer.css.map */

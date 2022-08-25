@@ -1,0 +1,54 @@
+@import "../../../variable";
+$footer-background: #262626;
+
+.footer {
+    padding: 2rem;
+    background: $secondary2;
+    border-top: 1px solid #ccc;
+    background: $footer-background;
+
+    &-container {
+        margin: 0 auto;
+        max-width: 1500px;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        place-items: start center;
+    }
+
+    &-content {
+        &:last-of-type {
+            .footer-column {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                column-gap: 4rem;
+
+                i {
+                    font-size: 2.6rem;
+                }
+            }
+
+
+        }
+
+        .footer-column {
+            margin-top: 2rem;
+        }
+    }
+
+    &-row {
+        font-family: "CharkaPetchRegular";
+        list-style-type: none;
+        color: white;
+
+        h3 {
+            font-size: 2rem;
+        }
+    }
+
+    &-item {
+        font-size: 1.6rem;
+        cursor: pointer;
+        line-height: 2.2;
+    }
+}
