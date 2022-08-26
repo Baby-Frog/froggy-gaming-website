@@ -26,16 +26,14 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 9;
-
 }
 
 .cat-image {
     position: absolute;
     right: 0;
     bottom: 0;
-    z-index: 9;
     width: 120px;
+    z-index: 2;
 }
 
 .cat-items::after {
@@ -48,5 +46,4 @@
     right: 20px;
     top: -20px;
     transform: rotate(15deg);
-    z-index: 1
 }
