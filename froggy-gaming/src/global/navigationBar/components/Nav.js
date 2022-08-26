@@ -4,9 +4,9 @@ import axios from "axios";
 import { Routes, Route, Link } from "react-router-dom";
 import "../styles/Nav.css";
 import Logo from "../assets/froggy-gaming-logo.png";
+import LoadingSkeleton from "../../../SkeletonLoading/LoadingSkeleton";
 import NavCategory from "./NavCategory";
 import useScrolled from "../../../hooks/useScrolled";
-import LoadingSkeleton from "../../SkeletonLoading/LoadingSkeleton";
 
 const initialState = {
   data: [],
@@ -113,7 +113,7 @@ const Nav = () => {
       <div className="header-hamburger-toggle">
         <i className="fa-solid fa-bars" onClick={handleMobileNav}></i>
       </div>
-      <Link to={"/froggy-gaming-website"} className="header-logo">
+      <Link to={"/"} className="header-logo">
         <img src={Logo} alt="Logo" className="header-icon" />
         <span className="header-brand">
           <span>Froggy</span>
@@ -184,7 +184,7 @@ const Nav = () => {
           </li>
 
           <Link
-            to={"froggy-gaming-website/category"}
+            to={"/category"}
             className="header-navigation-item header-navigation-item--flex"
           >
             <svg
