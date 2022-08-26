@@ -2,7 +2,7 @@ import React from "react";
 import { ContactBarData } from "./ContactBarData";
 import "./assets/styles/contactbar.css";
 import { useEffect } from "react";
-import useScrolled from "../hooks/useScrolled";
+import useScrolled from "../../hooks/useScrolled";
 
 const ContactBar = () => {
   const { height, isScrolled, setIsScrolled } = useScrolled(300);
