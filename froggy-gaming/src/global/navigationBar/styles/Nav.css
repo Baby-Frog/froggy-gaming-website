@@ -62,6 +62,7 @@ body.nav-open {
   align-items: center;
   height: 100%;
   flex-shrink: 0;
+  color: #29324E !important;
 }
 .header-icon {
   height: auto;
@@ -80,6 +81,9 @@ body.nav-open {
   padding-left: 0.7rem;
   font-family: "SpaceMission";
   line-height: 3rem;
+}
+.header-brand span {
+  color: #29324E !important;
 }
 .header-navigation {
   display: flex;

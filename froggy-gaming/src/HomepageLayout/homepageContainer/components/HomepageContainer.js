@@ -16,7 +16,6 @@ const HomepageContainer = () => {
       {/* Slider Showcase */}
       <SlickSlider></SlickSlider>
       <div className="homepage">
-        Homepage Event
         <SectionDivider
           sectionContent={"Chương trình và sự kiện"}
           marginBlock={"1.5rem"}
@@ -56,11 +55,6 @@ const HomepageContainer = () => {
           sectionContent={"Đánh giá từ khách hàng"}
           marginBlock="1rem"
         ></SectionDivider>
-        <SectionDivider
-          sectionContent={"Danh mục tổng hợp"}
-          marginBlock="1rem"
-        ></SectionDivider>
-        <CategoryContainer></CategoryContainer>
       </div>
     </Fragment>
   );

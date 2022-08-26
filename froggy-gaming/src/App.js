@@ -1,8 +1,8 @@
 import "./App.css";
-import HomepageContainer from "./HomepageLayout/homepageContainer/components/HomepageContainer";
-
 import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Aos from "aos";
+import HomepageContainer from "./HomepageLayout/homepageContainer/components/HomepageContainer";
 import ContactBar from "./FixedContactBar/ContactBar";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
 import Nav from "./global/navigationBar/components/Nav";
@@ -16,7 +16,10 @@ function App() {
   return (
     <div>
       <Nav></Nav>
-      <HomepageContainer></HomepageContainer>
+      <Routes>
+        <Route path="/" element={<HomepageContainer />}></Route>
+        <Route path="/category" element={<CategoryContainer />}></Route>
+      </Routes>
       <ContactBar></ContactBar>
       <ScrollToTop></ScrollToTop>
       <Footer></Footer>
