@@ -7,6 +7,7 @@ import ContactBar from "./FixedContactBar/ContactBar";
 import ScrollToTop from "./ScrollToTop/ScrollToTop";
 import Nav from "./global/navigationBar/components/Nav";
 import Footer from "./global/footer/Footer";
+import CategoryContainer from "./CategoryLayout/CategoryContainer";
 
 function App() {
   useEffect(() => {
@@ -15,7 +16,7 @@ function App() {
   return (
     <div>
       <Nav></Nav>
-      <HomepageContainer></HomepageContainer> 
+      <HomepageContainer></HomepageContainer>
       <ContactBar></ContactBar>
       <ScrollToTop></ScrollToTop>
       <Footer></Footer>

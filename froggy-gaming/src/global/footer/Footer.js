@@ -41,7 +41,7 @@ const Footer = () => {
             <h3>Công ty TNHH Thương Mại Froggy Gaming</h3>
             <div className="footer-address">
               <p>
-                Showroom HN: 18A Tôn Thất Thuyết, Mỹ Đình, Nam Từ Liêm, Hà Nội /
+                Showroom HN: 8A Tôn Thất Thuyết, Mỹ Đình, Nam Từ Liêm, Hà Nội /
                 Tel: (096) 9277386 / (086) 830.2123
               </p>
               <p>
