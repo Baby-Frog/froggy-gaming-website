@@ -1,0 +1,42 @@
+.cat-list {
+    padding-left: 0.5rem;
+}
+
+.cat-quote {
+    display: flex;
+    justify-content: center;
+
+}
+
+.quote-items {
+    width: calc((100% / 4) - 1rem);
+    height: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f3fc;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.quote-items svg {
+    width: 60px;
+    height: 60px;
+}
+
+
+.quote-text {
+    margin-left: 24px;
+    width: 117px;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    color: #000;
+    font-weight: bold;
+}
+
+
+#quote-chat {
+    height: 70%;
+    width: 70%;
+}

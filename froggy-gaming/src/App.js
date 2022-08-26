@@ -17,7 +17,10 @@ function App() {
     <div>
       <Nav></Nav>
       <Routes>
-        <Route path="/" element={<HomepageContainer />}></Route>
+        <Route
+          path="/froggy-gaming-website"
+          element={<HomepageContainer />}
+        ></Route>
         <Route path="/category" element={<CategoryContainer />}></Route>
       </Routes>
       <ContactBar></ContactBar>
