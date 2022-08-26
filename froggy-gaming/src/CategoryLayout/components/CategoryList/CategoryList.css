@@ -1,0 +1,52 @@
+.cat-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+}
+
+.cat-items {
+    width: calc((100% / 3) - 2rem);
+    height: 250px;
+    background: #f0f3fc;
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 9;
+
+}
+
+.cat-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    width: 120px;
+}
+
+.cat-items::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 130%;
+    background: #00f9c9;
+    right: 20px;
+    top: -20px;
+    transform: rotate(15deg);
+    z-index: 1
+}

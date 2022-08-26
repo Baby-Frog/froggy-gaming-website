@@ -1,118 +1,17 @@
-.cat-list {
-    padding-left: 0.5rem;
+.category-main{
+    max-width: 1500px;
+        margin: 2rem auto;
+        
 }
-
-.cat-quote {
-    display: flex;
-    justify-content: center;
-
+.cat-list{
+  display: flex;
+    font-size: 20px;
 }
-
-.quote-items {
-    width: calc((100% / 4) - 1rem);
-    height: 104px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f0f3fc;
-    margin: 1rem;
-    padding: 0.5rem;
-}
-
-.quote-items svg {
-    width: 60px;
-    height: 60px;
+.cat-list > p  > a{
+    padding: 1.5rem;
+    text-decoration: none; 
+    color: black;
 }
 
 
-.quote-text {
-    margin-left: 24px;
-    width: 117px;
-    font-size: 14px;
-    line-height: 21px;
-    display: flex;
-    color: #000;
-    font-weight: bold;
-}
 
-
-#quote-chat {
-    height: 70%;
-    width: 70%;
-}
-
-.cat-title {
-    text-align: center;
-
-}
-
-.cat-title h2::after,
-.cat-title h2::before {
-    background-color: #b9b9b9;
-    content: "";
-    display: inline-block;
-    height: 10px;
-    position: relative;
-    vertical-align: middle;
-    width: 20%;
-    margin: 1rem;
-}
-
-.cat-content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    gap: 2rem;
-}
-
-.cat-items {
-    width: calc((100% / 3) - 2rem);
-    height: 250px;
-    background: #f0f3fc;
-    position: relative;
-    overflow: hidden;
-}
-
-.cat-text {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    color: #000;
-    text-decoration: none;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 9;
-
-}
-
-.cat-image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 9;
-    width: 120px;
-}
-
-.cat-items::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 60px;
-    height: 130%;
-    background: #00f9c9;
-    right: 20px;
-    top: -20px;
-    transform: rotate(15deg);
-    z-index: 1
-}
-
-@media screen and (max-width: 1024px) {
-    .cat-items {
-        width: calc((100% / 2) - 2rem);
-    }
-}
