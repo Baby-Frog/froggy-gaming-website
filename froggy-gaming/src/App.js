@@ -1,5 +1,6 @@
 import "./App.css";
 import HomepageContainer from "./HomepageLayout/homepageContainer/components/HomepageContainer";
+
 import { useEffect } from "react";
 import Aos from "aos";
 import ContactBar from "./FixedContactBar/ContactBar";
@@ -14,7 +15,7 @@ function App() {
   return (
     <div>
       <Nav></Nav>
-      <HomepageContainer></HomepageContainer>
+      <HomepageContainer></HomepageContainer> 
       <ContactBar></ContactBar>
       <ScrollToTop></ScrollToTop>
       <Footer></Footer>

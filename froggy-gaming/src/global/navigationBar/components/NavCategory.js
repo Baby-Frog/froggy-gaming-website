@@ -9,7 +9,7 @@ const NavCategory = () => {
         <ul className="category-list">
           <li className="category-item">
             <a
-              href="https://www.google.com"
+              href="../"
               target={"_blank"}
               rel={"noreferrer"}
               className={`category-link ${selected && "selected"}`}
