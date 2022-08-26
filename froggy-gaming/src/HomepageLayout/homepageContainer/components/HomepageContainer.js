@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import CategoryContainer from "../../../CategoryLayout/CategoryContainer";
-import ShowMore from "../../../global/ShowMore/ShowMore";
+import ShowMore from "../../../ShowMore/ShowMore";
 import BrandSlider from "../../brandSlider/BrandSlider";
 import HomepageCategory from "../../homepageCategory/components/HomepageCategory";
 import HomepageEvent from "../../homepageEvent/components/HomepageEvent";

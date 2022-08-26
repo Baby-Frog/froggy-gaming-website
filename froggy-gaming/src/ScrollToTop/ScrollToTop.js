@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import $ from "jquery";
 import { Fragment } from "react";
 import "./assets/styles/scrollbutton.css";
-import useScrolled from "../../hooks/useScrolled";
+import useScrolled from "../hooks/useScrolled";
 
 const ScrollToTopButton = () => {
   const { height, isScrolled, setIsScrolled } = useScrolled(300);

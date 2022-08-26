@@ -1,6 +1,37 @@
 import React from "react";
 
 import "./CategoryContainer.css";
+<<<<<<< HEAD
+import CategoryList from "./components/CategoryList/CategoryList";
+import CategoryQuote from "./components/CategoryQuote/CategoryQuote";
+
+const CategoryContainer = () => {
+  return (
+    <div className="category-main">
+      <div className="cat-list">
+        <p>
+          <a href="#">
+            <i aria-hidden="true" class="fa fa-home">
+              {" "}
+            </i>
+          </a>
+        </p>
+        <p>{">"}</p>
+        <p>
+          <a href="#">Trang chủ</a>
+        </p>
+        <p>{">"}</p>
+        <p>
+          <a href="#"> Danh mục</a>
+        </p>
+      </div>
+      <CategoryQuote></CategoryQuote>
+      {/*  */}
+      <SectionDivider sectionContent={"Gaming Gear"}></SectionDivider>
+      <CategoryList></CategoryList>
+      <SectionDivider sectionContent={"Các thương hiệu"}></SectionDivider>
+      <BrandSlider></BrandSlider>
+=======
 import Acer from "./asset/img/laptop-acer.png";
 import Dell from "./asset/img/laptop-dell.png";
 import Gaming from "./asset/img/laptop-dell-alien.png";
@@ -153,6 +184,7 @@ const CategoryContainer = () => {
           <img src={Gigabyte} alt="" className="cat-image" />
         </a>
       </div>
+>>>>>>> parent of e1ef35f (update category)
     </div>
   );
 };
