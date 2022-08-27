@@ -3,12 +3,12 @@ import BrandSlider from "../HomepageLayout/brandSlider/BrandSlider";
 import SectionDivider from "../HomepageLayout/sectionDivider/components/SectionDivider";
 
 import "./CategoryContainer.css";
-import CategoryQuote from "./CategoryQuote/CategoryQuote";
+import CategoryQuote from "./components/CategoryQuote/CategoryQuote";
 import CategoryList from "./components/CategoryList/CategoryList";
 
 const CategoryContainer = () => {
   return (
-    <div className="category-main">
+    <div className="category-container">
       <div className="cat-list">
         <p>
           <a href="#">

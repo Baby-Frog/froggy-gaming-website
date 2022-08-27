@@ -3,7 +3,7 @@
   width: 100%;
   top: calc(100% + 1rem);
   left: -3rem;
-  z-index: 3;
+  z-index: 99;
   display: none;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
