@@ -1,0 +1,58 @@
+@import "../../../variable";
+
+.contact-bar {
+    position: fixed;
+    padding: 1rem;
+    box-shadow: 12px 0 34px #888;
+    border-radius: 12px 0 0 12px;
+    right: 0;
+    top: 50%;
+    transform: translate(calc(100% - 5rem), -50%);
+    transition: all 150ms ease-out;
+    background: white;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:hover {
+        transform: translate(0rem, -50%);
+    }
+
+    &-item {
+        margin-bottom: 1rem;
+    }
+
+    &-list {
+        list-style-type: none;
+    }
+
+    &-info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+
+        &:hover {
+            .contact-bar-name {
+                color: $primary2;
+            }
+        }
+    }
+
+    &-name {
+        color: black;
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-bar {
+        display: none;
+    }
+}

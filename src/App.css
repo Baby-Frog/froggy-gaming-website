@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lato:wght@300;400&family=Open+Sans:ital,wght@0,400;0,500;1,300;1,400&family=Oswald:wght@200;300;400;500&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+::selection {
+  background: #2D2F36;
+  color: white;
+}
+
+::-webkit-selection {
+  background: #2D2F36;
+  color: white;
+}
+
+::-moz-selection {
+  background: #2D2F36;
+  color: white;
+}
+
+@font-face {
+  font-family: "SpaceMission";
+  src: url("./fonts/SpaceMission-rgyw9.otf");
+}
+
+@font-face {
+  font-family: "CharkaPetchRegular";
+  src: url("./fonts/ChakraPetch-Regular.ttf");
+}
+
+@font-face {
+  font-family: "CharkaPetchBold";
+  src: url("./fonts/ChakraPetch-Bold.ttf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a * {
+  text-decoration: none;
+}

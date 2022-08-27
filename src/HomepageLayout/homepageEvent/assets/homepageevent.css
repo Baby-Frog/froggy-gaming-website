@@ -1,0 +1,73 @@
+@charset "UTF-8";
+:root {
+  --ratio: 2.74;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 15px;
+  grid-template-areas: "img1 img1 img2" "img3 img4 img4";
+}
+.event-aos {
+  border-radius: 1rem;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+.event-aos:hover {
+  transform: scale(1.02);
+}
+.event-aos:nth-child(1) {
+  grid-area: img1;
+}
+.event-aos:nth-child(2) {
+  grid-area: img2;
+}
+.event-aos:nth-child(3) {
+  grid-area: img3;
+}
+.event-aos:nth-child(4) {
+  grid-area: img4;
+}
+.event-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.event-item::after {
+  content: "Tìm hiểu thêm >";
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  background: rgba(41, 50, 78, 0.8);
+  padding: 2rem;
+  color: white;
+  font-size: 2rem;
+  font-family: "CharkaPetchBold";
+}
+.event-item img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1536px) {
+  .event {
+    padding: 0 4.8rem 4.8rem 4.8rem;
+  }
+  .event-item::after {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .event {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    padding: 0 3.8rem 3.8rem 3.8rem;
+    grid-template-areas: "img1 img1 img1 img1" "img4 img4 img4 img4" "img2 img2 img3 img3";
+  }
+  .event-item::after {
+    display: none;
+  }
+}/*# sourceMappingURL=homepageevent.css.map */

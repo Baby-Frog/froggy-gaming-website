@@ -1,0 +1,97 @@
+@import "../../../variable";
+$footer-background: #262626;
+
+.footer {
+    font-family: "CharkaPetchBold";
+    padding: 2rem;
+    background: $secondary2;
+    border-top: 1px solid #ccc;
+    background: $footer-background;
+
+    &-container {
+        margin: 0 auto;
+        max-width: 1500px;
+    }
+
+    &-list {
+
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        place-items: start center;
+    }
+
+    &-content {
+        &:last-of-type {
+            .footer-column {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                column-gap: 4rem;
+
+                i {
+                    font-size: 2.6rem;
+                }
+            }
+
+
+        }
+
+        .footer-column {
+            margin-top: 2rem;
+        }
+    }
+
+    &-row {
+        font-family: "CharkaPetchRegular";
+        list-style-type: none;
+        color: white;
+
+        h3 {
+            font-size: 2rem;
+        }
+    }
+
+    &-item {
+        font-size: 1.6rem;
+        cursor: pointer;
+        line-height: 2.2;
+    }
+
+    &-storeinfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1320px;
+        margin: 1rem auto;
+        color: white;
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-family: "CharkaPetchRegular";
+        }
+    }
+
+    &-address {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        &-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-storeinfo {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+
+}
