@@ -18,4 +18,4 @@ Keycaps: Akko, GMK, Vortex
 Gaming Chair: Cosair, DXRacer, Warrior, Cougar
 
 - To run this project:
-  - Direct to this repo instead: [FroggyGamingFrontEndCode]https://github.com/Baby-Frog/froggy-gaming-web
+  - Direct to this repo instead: [Froggy Gaming Front-End Code](https://github.com/Baby-Frog/froggy-gaming-web)
