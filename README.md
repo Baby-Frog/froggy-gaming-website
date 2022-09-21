@@ -1,6 +1,6 @@
-# Hi! Welcome to our project, this is the first repository of froggy-gaming-web
+# Hi! Welcome to our project
 
-This is a gaming gears store website
+This is the first repository of froggy-gaming-web, this is before my member destroyed the repository
 
 See more detail in [Froggy Gaming](https://baby-frog.github.io/froggy-gaming-website/)
 
