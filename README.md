@@ -1,4 +1,4 @@
-# Hi! Welcome to our project
+# Hi! Welcome to our project, this is the first repository of froggy-gaming-web
 
 This is a gaming gears store website
 
